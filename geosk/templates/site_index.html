@@ -40,6 +40,7 @@ This is where you can override the hero area block. You can simply modify the co
             <p class="text-center"><a class="btn btn-default" href="{% url "layer_browse" %}" role="button">{% trans "Explore layers" %} &raquo;</a></p>
             {% endif %}
           </div>
+          {% if user.is_staff %}
           <div class="col-md-6">
             <p><a href="{% url "osk_browse" %}"><i class="fa fa-square-o fa-4x rotate-45"></i></a></p>
             <!--<h2><a href="{% url "osk_browse" %}">{{ facets.layer|default:_("No") }} {% blocktrans count counter=facets.layer %}Sensor{% plural %}Sensors{% endblocktrans %}</a></h2>-->
@@ -51,6 +52,7 @@ This is where you can override the hero area block. You can simply modify the co
             <p class="text-center"><a class="btn btn-default" href="{% url "osk_browse" %}" role="button">{% trans "Explore sensors" %} &raquo;</a></p>
             {% endif %}
           </div>
+          {% endif %}
           <div class="col-md-6">
             <p><a href="{% url "maps_browse" %}"><i class="fa fa-map-marker fa-4x"></i></a></p>
             <h2><a href="{% url "maps_browse" %}">{{ facets.map|default:_("No") }} {% blocktrans count counter=facets.map %}Map{% plural %}Maps{% endblocktrans %}</a></h2>
@@ -61,6 +63,8 @@ This is where you can override the hero area block. You can simply modify the co
             <p><a class="btn btn-default" href="{% url "maps_browse" %}" role="button">{% trans "Explore maps" %} &raquo;</a></p>
             {% endif %}
           </div>
+          {% if user.is_superuser %}
+          {% if user.is_staff %}
           <div class="col-md-6">
             <p><a href="{% url "document_browse" %}"><i class="fa fa-newspaper-o fa-4x"></i></a></p>
             <h2><a href="{% url "document_browse" %}">{{ facets.document|default:_("No") }} {% blocktrans count counter=facets.document %}Document{% plural %}Documents{% endblocktrans %}</a></h2>
@@ -71,12 +75,14 @@ This is where you can override the hero area block. You can simply modify the co
             <p class="text-center"><a class="btn btn-default" href="{% url "document_browse" %}" role="button">{% trans "Explore documents" %} &raquo;</a></p>
             {% endif %}
           </div>
+          {% endif %}
           <div class="col-md-6">
             <p><a href="{% url "profile_browse" %}"><i class="fa fa-user fa-4x"></i></a></p>
             <h2><a href="{% url "profile_browse" %}">{{ facets.user|default:_("No") }} {% blocktrans count counter=facets.user %}User{% plural %}Users{% endblocktrans %}</a></h2>
             <p>{% trans "IHP-WINS allows registered users to easily upload geospatial data and various documents in several formats." %}</p>
             <p><a class="btn btn-default" href="{% url "profile_browse" %}" role="button">{% trans "See users" %} &raquo;</a></p>
           </div>
+          {% endif %}
         {% endwith %}
         </div>
       </div>
