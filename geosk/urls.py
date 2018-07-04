@@ -51,6 +51,11 @@ geoskurlpatterns = patterns(
         name='sk_credits'
     ),
 
+    url(r'^gdpr/',
+        TemplateView.as_view(template_name='gdpr.html'),
+        name='gdpr'
+     ),
+
     ###
     ## additional services within GeoNode
     ###
@@ -86,6 +91,7 @@ geoskurlpatterns = patterns(
      include('grappelli.urls')
      ),  # grappelli URLS
 )
+
 
 if 'rosetta' in settings.INSTALLED_APPS:
     geoskurlpatterns += patterns(
