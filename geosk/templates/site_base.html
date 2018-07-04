@@ -85,6 +85,8 @@ $('#SigninModal').on('show.bs.modal', function (e) {
     $(this).find('.modal-body').append($('<a href="{% url 'gdpr' %}">GDPR</a>'));
 })
 </script>
+<script src="{{ STATIC_URL }}geosk/js/cookieconsent.js"></script>
+<script src="{{ STATIC_URL }}cookieconsent2/cookieconsent.min.js"></script>
 {% endblock extra_script %}
 
 
