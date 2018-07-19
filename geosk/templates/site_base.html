@@ -1,14 +1,29 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load i18n avatar_tags %}
 {% block extra_head %}
       <link href="{{ STATIC_URL }}css/site_base.css" rel="stylesheet"/>
+      <link href="{{ STATIC_URL }}css/custom.css" rel="stylesheet"/>
       <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico">
 {% endblock %}
 
-{% block tabs %}
+
+<!-- Navbar -->
+    {% block header %}
+	<nav class="navbar navbar-inverse navbar-fixed-top custom-navbar custom-max-width" role="navigation">
+	  <div class="container">
+        <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	        <i class="fa fa-navicon fa-lg"></i>
+	      </button>
+	      <a class="navbar-brand header-logo" href="{% url "home" %}">GeoNode</a>
+	    </div>
+	    <div id="navbar" class="navbar-collapse collapse">
+	      <ul class="nav navbar-nav toolbar  custom-nav">
+	        {% block tabs %}
 <li id="nav_layers">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "Data" %}<i class="fa fa-angle-down fa-lg"></i></a>
-  <ul class="dropdown-menu">
+  <ul class="dropdown-menu custom-dropdown">
     <li><a href="{% url "layer_browse" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Layers" %}</a></li>
     <li><a href="{% url "document_browse" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Documents" %}</a></li>
     {% if user.is_authenticated %}
@@ -26,7 +41,7 @@
 <li id="nav_maps">
   {% if user.is_authenticated %}
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "Maps" %}<i class="fa fa-angle-down fa-lg"></i></a>
-  <ul class="dropdown-menu">
+  <ul class="dropdown-menu custom-dropdown">
     <li><a href="{% url "maps_browse" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Explore Maps" %}</a></li>
     <li> <a href="{% url "new_map" %}">{% trans "Create Map" %}</a></li>
   </ul>
@@ -37,7 +52,7 @@
 <li>
  {% if user.is_superuser  %}
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "Users" %}<i class="fa fa-angle-down fa-lg"></i></a>
-  <ul class="dropdown-menu">
+  <ul class="dropdown-menu custom-dropdown">
     <li><a href="{% url "profile_browse" %}">{% trans "People" %}</a></li>
     <li><a href="{% url "group_list" %}">{% trans "Groups" %}</a></li>
     <li><a href="{% url "group_category_list" %}">{% trans "Group Categories" %}</a></li>
@@ -59,14 +74,14 @@
 <li id="nav_osk">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "Sensors" %}<i class="fa fa-angle-down fa-lg"></i></a>
   {% if user.is_authenticated %}
-  <ul class="dropdown-menu">
+  <ul class="dropdown-menu custom-dropdown">
     <li><a href="{% url "osk_browse" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Explore Sensors" %}</a></li>
     {% if perms.osk.admin_sos %}
     <li><a href="{% url "osk_browse" %}#ediclient_container">{% trans "Register a new  Sensor" %}</a></li>
     {% endif %}
   </ul>
   {% else %}
-  <ul class="dropdown-menu">
+  <ul class="dropdown-menu custom-dropdown">
     <li><a href="{% url "osk_browse" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Sensors" %}</a></li>
   </ul>
   {% endif %}
@@ -75,6 +90,69 @@
 {% endif %}
 {% endblock %}
 {% endblock %}
+          </ul>
+	      <ul class="nav navbar-nav navbar-right custom-nav">
+            <li>
+              <div class="search">
+                <form id="search" action="{% url "search" %}" >
+                  <span class="fa fa-search"></span>
+                  {% if HAYSTACK_SEARCH %}
+                  <input id="search_input" type="text" placeholder="Search" name="q">
+                  {% else %}
+                  <input id="search_input" type="text" placeholder="Search" name="title__icontains">
+                  {% endif %}
+                </form>
+              </div>
+	        </li>
+            {% if not user.is_authenticated and ACCOUNT_OPEN_SIGNUP %}
+            <li><a href="{% url "account_signup" %}">{% trans "Register" %}</a></li>
+            {% endif %}
+            {% if user.is_authenticated %}
+            <li>
+              <a href="#" class="dropdown-toggle avatar" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                {% with full_name=user.first_name|add:' '|add:user.last_name %}
+                  {% if full_name.strip %}
+                    {{ full_name | truncatechars:20 }}
+                  {% else %}
+                    {{ user.username | truncatechars:20 }}
+                  {% endif %}
+                {% endwith %}
+                <i class="fa fa-angle-down fa-lg"></i>
+              </a>
+              <ul class="dropdown-menu custom-dropdown">
+                <li><a href="{{ user.get_absolute_url }}">{% trans "Profile" %}</a></li>
+                <li><a href="{% url "recent-activity" %}">{% trans "Recent Activity" %}</a></li>
+                <li><a href="{% url "messages_inbox" %}">{% trans "Inbox" %}</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="{% url "admin:index" %}">Admin</a></li>
+                {% if 'geonode.geoserver' in INSTALLED_APPS %}
+                <li><a href="{{ GEOSERVER_BASE_URL }}index.html">GeoServer</a></li>
+                {% endif %}
+                {% if user.is_superuser and USE_MONITORING %}
+                <li role="separator" class="divider"></li>
+                <li><a href="{% url "monitoring:index" %}">{% trans "Monitoring" %}</a></li>
+                {% endif %}
+                <li role="separator" class="divider"></li>
+                <li><a href="{% url "help" %}">{% trans "Help" %}</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/account/logout/">Logout</a></li>
+                </ul>
+              </li>
+		      {% else %}
+		      <li><a href="#" data-toggle="modal" data-target="#SigninModal" role="button" >{% trans "Sign in" %} </a></li>
+              {% endif %}
+            </ul>
+          </div> <!--/.nav-collapse -->
+        </div>
+      <div class="custom-subnavbar">
+        <div class="container">
+            <a href="http://www.ibfservizi.it"><i class="fa fa-angle-left"></i> TORNA AL SITO IBF SERVIZI</a>
+        </div>
+    </div>
+      </nav>
+      {% endblock header %}
+      <!-- End of Navbar -->
+
 
 
 {% block extra_script %}
@@ -92,6 +170,7 @@ $('#SigninModal').on('show.bs.modal', function (e) {
 
 
 {% block footer %}
+{% comment %}
 <footer>
     <div class="container">
         <div class="row">
@@ -124,4 +203,5 @@ $('#SigninModal').on('show.bs.modal', function (e) {
         </div>
     </div>
 </footer>
+{% endcomment %}
 {% endblock footer %}
