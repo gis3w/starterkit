@@ -6,25 +6,56 @@
 
 {% block head_title %}{% trans "Log in" %}{% endblock %}
 
+{% block custom-wrap-class %}custom-login{% endblock %}
+
+
 {% block body_outer %}
-<div class="page-header">
-  <h2>{% trans "Log in to an existing account" %}</h2>
-</div>
-<div class="row">
-  <div class="col-md-8">
-    <form role="form" method="POST" action="{% url "account_login" %}" autocapitalize="off" {% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
+
+<div class="login-box">
+    <h3>{% trans "Reserved Area" %}</h3>
+    <form class="form-signin" role="form" method="POST" action="{% url "account_login" %}" autocapitalize="off" {% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
       {% csrf_token %}
-      {{ form|as_bootstrap }}
+      <div>
+      {% if form.errors %}
+          <div class="alert alert-danger">
+            {{ form.non_field_errors }}
+          </div>
+      {% endif %}
+      <div class="form-group">
+            <label class="custom-label" for="{{ form.username.id_for_label }}">{{ form.username.label }}:</label>
+            <input id="{{ form.username.id_for_label }}" class="form-control custom-control" name="username" placeholder="Username" type="text" />
+        </div>
+          {{ form.username.errors }}
+      <div class="form-group">
+            <label class="custom-label" for="{{ form.password.id_for_label }}">{{ form.password.label }}:</label>
+            <input id="{{ form.password.id_for_label }}" class="form-control custom-control" name="password" placeholder="Password" type="text" />
+        </div>
+          {{ form.password.errors }}
+      <label class="checkbox custom-checkbox" for="{{ form.remember.id_for_label }}">{{ form.remember.label }}
+            <input id="{{ form.remember.id_for_label }}"  name="remember" type="checkbox" />
+      </label>
+      </div>
+
+      <div>
+      {% comment %}{{ form|as_bootstrap }}{% endcomment %}
       <a href="{% url 'gdpr' %}">GDPR</a>
       {% if redirect_field_value %}
       <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
       {% endif %}
+      <!--
       <div class="form-group">
         <p><a href="{% url "forgot_username" %}">{% trans "Forgot your username?" %}</a></p>
         <p><a href="{% url "account_password_reset" %}">{% trans "Forgot your password?" %}</a></p>
       </div>
-      <button type="submit" class="btn btn-primary">{% trans "Log in" %}</button>
+      -->
+
+      <button type="submit" class="btn btn-primary btn-block custom-btn">{% trans "Log in" %}</button>
+      </div>
     </form>
-  </div>
+
 </div>
 {% endblock %}
+
+
+
+

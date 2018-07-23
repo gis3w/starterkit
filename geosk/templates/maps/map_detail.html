@@ -46,7 +46,9 @@
 
       <h2 class="page-title">{{ resource.title }}</h2>
     </div>
-
+    </div>
+    <div class="custom-padding-top bg--light-grey">
+    <div class="container">
       <div class="row">
         <div class="col-md-12">
 
@@ -54,93 +56,33 @@
             <div id="the_map"></div>
           </div>
 
-          <div class="map-actions">
-            {% include "_actions.html" %}
-          </div>
-
-          <div class="tab-content">
-            {% include "base/resourcebase_info_panel.html" %}
-
-            {% if USE_GEOSERVER and DISPLAY_WMS_LINKS %}
-            <p>
-              {% if request.user.is_authenticated and 'access_token' in request.session %}
-                <a href="{% url 'capabilities_map' resource.id %}?access_token={{ request.session.access_token }}">
-              {% else %}
-                <a href="{% url 'capabilities_map' resource.id %}">
-              {% endif %}
-              <i class="fa fa-map"></i> {% trans 'Map layers WMS GetCapabilities document' %}</a></p>
-            {% endif %}
-
-            {% block social_links %}
-                {% if DISPLAY_SOCIAL %}
-                  {% include "social_links.html" %}
-                {% endif %}
-            {% endblock %}
-
-            {% if DISPLAY_COMMENTS %}
-            <article class="tab-pane" id="comments">
-            {% include "_comments.html" %}
-            </article>
-            {% endif %}
-
-            {% if DISPLAY_RATINGS %}
-            <article class="tab-pane" id="rate">
-            <!-- TODO: Move this to a reusable template snippet -->
-              {% if request.user.is_authenticated %}
-              <h3>{% trans "Rate this Map" %}</h3>
-              {% user_rating request.user resource "map" as user_map_rating %}
-              <div id="user_rating" class="category-map" data-score="{{ user_map_rating }}"></div>
-              {% endif %}
-              <h3>{% trans 'Average Rating' %}</h3>
-              {% overall_rating resource "map" as map_rating %}
-              {% num_ratings resource as num_votes %}
-              <div class="overall_rating" style="float:left" data-score="{{ map_rating }}"></div> ({{num_votes}})
-            </article>
-            {% endif %}
-          </div>
-
-        </div>
-
-        <div class="col-md-4">
-          <ul class="list-group">
-            {% if "download_resourcebase" in perms_list %}
-            <li class="list-group-item">
-              <button class="btn btn-primary btn-md btn-block" data-toggle="modal" data-target="#download-map">{% trans "Download Map" %}</button>
-            </li>
-            {% endif %}
-
-            <li class="list-group-item">
-               <a href="{% url "map_metadata_detail" resource.id %}">
-                   <button class="btn btn-primary btn-md btn-block" >{% trans "Metadata Detail" %}</button>
-               </a>
-            </li>
-
-            <div class="modal fade" id="download-map" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">{% trans "Download Map" %}</h4>
-                  </div>
-                  <div class="modal-body">
-                    <ul>
-                        {% if links %}
-                            {% for link in links %}
-                                <li><a href="{{ link.url }}">{{ link.name }}</a></li>
-                            {% endfor %}
-                        {% endif %}
-                    <ul>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">{% trans "Close" %}</button>
-                  </div>
-                </div>
+          <div class="custom-padding bg--white">
+              <div class="map-actions layer-actions">
+                {% include "_actions.html" %}
               </div>
-            </div>
-            {% if "change_resourcebase" in perms_list  or "change_resourcebase_metadata" in perms_list %}
+
+              <div class="tab-content">
+                <article id="info" class="tab-pane{% if tab == 'info' or not tab %} active{% endif %}">
+                    <div class="row">
+                        <div class="col-md-6">
+                        {% include "base/resourcebase_info_panel.html" %}
+                        {% if USE_GEOSERVER and DISPLAY_WMS_LINKS %}
+                        <p>
+                          {% if request.user.is_authenticated and 'access_token' in request.session %}
+                            <a href="{% url 'capabilities_map' resource.id %}?access_token={{ request.session.access_token }}">
+                          {% else %}
+                            <a href="{% url 'capabilities_map' resource.id %}">
+                          {% endif %}
+                          <i class="fa fa-map"></i> {% trans 'Map layers WMS GetCapabilities document' %}</a></p>
+                        {% endif %}
+                        </div>
+
+                        <div class="col-md-6">
+          <ul class="list-group">
             <li class="list-group-item">
-              <button class="btn btn-primary btn-md btn-block" data-toggle="modal" data-target="#edit-map">{% trans "Edit Map" %}</button>
-            </li>
+              <a href="{% url "map_view" resource.id %}" class="btn btn-default btn-md btn-block custom-half-btn custom-green-btn">{% trans "View Map" %}</a>
+            {% if "change_resourcebase" in perms_list  or "change_resourcebase_metadata" in perms_list %}
+              <button class="btn btn-primary btn-md btn-block custom-half-btn no-margin" data-toggle="modal" data-target="#edit-map">{% trans "Edit Map" %}</button>
             <div class="modal fade" id="edit-map" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
@@ -182,9 +124,44 @@
               </div>
             </div>
             {% endif %}
-            <li class="list-group-item">
-              <a href="{% url "map_view" resource.id %}" class="btn btn-default btn-md btn-block">{% trans "View Map" %}</a>
             </li>
+
+            {% if "download_resourcebase" in perms_list %}
+            <li class="list-group-item">
+              <button class="btn btn-primary btn-md btn-block custom-full-btn" data-toggle="modal" data-target="#download-map">{% trans "Download Map" %}</button>
+            </li>
+            {% endif %}
+
+            <li class="list-group-item">
+               <a href="{% url "map_metadata_detail" resource.id %}">
+                   <button class="btn btn-primary btn-md btn-block custom-full-btn" >{% trans "Metadata Detail" %}</button>
+               </a>
+            </li>
+
+            <div class="modal fade" id="download-map" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">{% trans "Download Map" %}</h4>
+                  </div>
+                  <div class="modal-body">
+                    <ul>
+                        {% if links %}
+                            {% for link in links %}
+                                <li><a href="{{ link.url }}">{{ link.name }}</a></li>
+                            {% endfor %}
+                        {% endif %}
+                    <ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">{% trans "Close" %}</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
             {% comment %}
             <li class="list-group-item">
               <a href="#" class="btn btn-default btn-md btn-block">{% trans "Print Map" %}</a>
@@ -223,7 +200,7 @@
             <li class="list-group-item">
               <h4>{% trans "Permissions" %}</h4>
               <p>{% trans "Specify which users can view or modify this map" %}</p>
-              <button class="btn btn-primary btn-md btn-block" data-toggle="modal" data-target="#_permissions">{% trans "Change Permissions of this Map" %}</button>
+              <button class="btn btn-primary btn-md btn-block custom-full-btn" data-toggle="modal" data-target="#_permissions"><i class="fa custom-icon custom-icon-hover custom-icon-lock pull-left"></i> {% trans "Change Permissions of this Map" %}</button>
             </li>
             {% include "_permissions_form.html" %}
             {% endif %}
@@ -231,7 +208,7 @@
             <li class="list-group-item">
               <h4>{% trans "Copy this map" %}</h4>
               <p>{% trans "Duplicate this map and modify it for your own purposes" %}</p>
-              <a href="{% url "new_map" %}?copy={{ resource.id }}" class="btn btn-default btn-md btn-block">{% trans "Create a New Map" %}</a>
+              <a href="{% url "new_map" %}?copy={{ resource.id }}" class="btn btn-default btn-md btn-block custom-full-btn">{% trans "Create a New Map" %}</a>
             </li>
             {% if 'geonode.qgis_server' in INSTALLED_APPS %}
               <li class="list-group-item">
@@ -264,7 +241,7 @@
                 {% endif %}</dl>
               {% if "change_resourcebase" in perms_list %}
               <p>{% trans "Publish local map layers as WMS layer group" %}</p>
-              <a id="layer-group" href="{%url "map_wms" resource.id %}" class="btn btn-default btn-md btn-block">{% trans "Publish Map WMS" %}</a>
+              <a id="layer-group" href="{%url "map_wms" resource.id %}" class="btn btn-default btn-md btn-block custom-full-btn">{% trans "Publish Map WMS" %}</a>
               {% endif %}
               <dl id="layer-group-dl"></dl>
             </li>
@@ -275,6 +252,41 @@
           </ul>
 
         </div>
+
+                        </div>
+                </article>
+
+                {% block social_links %}
+                    {% if DISPLAY_SOCIAL %}
+                      {% include "social_links.html" %}
+                    {% endif %}
+                {% endblock %}
+
+                {% if DISPLAY_COMMENTS %}
+                <article class="tab-pane" id="comments">
+                {% include "_comments.html" %}
+                </article>
+                {% endif %}
+
+                {% if DISPLAY_RATINGS %}
+                <article class="tab-pane" id="rate">
+                <!-- TODO: Move this to a reusable template snippet -->
+                  {% if request.user.is_authenticated %}
+                  <h3>{% trans "Rate this Map" %}</h3>
+                  {% user_rating request.user resource "map" as user_map_rating %}
+                  <div id="user_rating" class="category-map" data-score="{{ user_map_rating }}"></div>
+                  {% endif %}
+                  <h3>{% trans 'Average Rating' %}</h3>
+                  {% overall_rating resource "map" as map_rating %}
+                  {% num_ratings resource as num_votes %}
+                  <div class="overall_rating" style="float:left" data-score="{{ map_rating }}"></div> ({{num_votes}})
+                </article>
+                {% endif %}
+              </div>
+          </div>
+        </div>
+
+
 
       </div>
 
@@ -320,8 +332,11 @@
                 </div>
             </div>
         </div>
-
+    </div>
+    </div>
       {% endblock %}
+    </div>
+
     </div>
     {% endblock middle %}
 
