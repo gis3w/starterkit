@@ -29,7 +29,7 @@
 
 <div class="row">
     <div class="col-xs-3 col-md-3"><!-- profile-image -->
-  {% avatar profile 240 %}
+  {% avatar profile 210 %}
 </div>
 
     <div class="col-xs-9 col-md-6 profile-details">
@@ -62,7 +62,7 @@
     {% endif %}
     {% endif %}
 
-      <h3>{{ profile.first_name|default:profile.name_long }}</h3>
+      <!--<h3>{{ profile.first_name|default:profile.name_long }}</h3>-->
       <table class="table table-user-profile custom-user-table">
         <tbody>
           {% if SHOW_PROFILE_EMAIL %}
@@ -131,23 +131,23 @@
     </div>
 
     <div class="col-xs-12 col-md-3">
-      <ul class="list-group">
+      <ul class="list-group custom-profile-menu">
           <li class="list-group-item"><a href="{% url "message_create" profile.pk %}"><i class="fa fa-paper-plane-o"></i> {% trans "Message User" %}</a></li>
         </ul>
       {% if user == profile %}
-        <ul class="list-group">
+        <ul class="list-group custom-profile-menu">
           <li class="list-group-item"><a href="{% url "profile_edit" user.username %}"><i class="fa fa-edit"></i> {% trans "Edit profile" %}</a></li>
           <li class="list-group-item"><a href="{% url "account_password" %}"><i class="fa fa-lock"></i> {% trans "Change password" %}</a></li>
         </ul>
-        <ul class="list-group">
-          <li class="list-group-item"><a href="{% url "layer_upload" %}"><i class="fa fa-cloud-upload"></i> {% trans "Upload new layers" %}</a></li>
+        <ul class="list-group custom-profile-menu">
+          <li class="list-group-item"><a href="{% url "layer_upload" %}"><i class="fa custom-icon custom-icon-layer custom-icon-green"></i><!--<i class="fa fa-cloud-upload"></i>--> {% trans "Upload new layers" %}</a></li>
           {% if 'geonode.contrib.createlayer' in INSTALLED_APPS %}
-            <li class="list-group-item"><a href="{% url "layer_create" %}"><i class="fa fa-map-o"></i> {% trans "Create a new layer" %}</a></li>
+            <li class="list-group-item"><a href="{% url "layer_create" %}"><i class="fa custom-icon custom-icon-layer custom-icon-green"></i><!--<i class="fa fa-map-o"></i>--> {% trans "Create a new layer" %}</a></li>
           {% endif %}
-          <li class="list-group-item"><a href="{% url "new_map" %}"><i class="fa fa-map-marker"></i> {% trans "Create a new map" %}</a></li>
-          <li class="list-group-item"><a href="{% url "user-activity" profile.username %}"><i class="fa fa-fire"></i> {% trans "My Activities" %}</a></li>
+          <li class="list-group-item"><a href="{% url "new_map" %}"><i class="fa custom-icon custom-icon-map custom-icon-green"></i><!--<i class="fa fa-map-marker"></i>--> {% trans "Create a new map" %}</a></li>
+          <li class="list-group-item"><a href="{% url "user-activity" profile.username %}"><i class="fa custom-icon custom-icon-activities custom-icon-green"></i><!--<i class="fa fa-fire">--></i> {% trans "My Activities" %}</a></li>
         </ul>
-        <ul class="list-group">
+        <ul class="list-group custom-profile-menu">
           {% if USE_NOTIFICATIONS %}
           <li class="list-group-item"><a href="{% url "notification_notice_settings" %}"><i class="fa fa-bell"></i> {% trans "Notifications" %}</a></li>
           {% endif %}
@@ -156,7 +156,7 @@
           {% endif %}
         </ul>
           {% if user.is_superuser %}
-        <ul class="list-group">
+        <ul class="list-group custom-profile-menu">
           <li class="list-group-item"><a href="{% url "services" %}?limit={{ CLIENT_RESULTS_LIMIT }}"><i class="fa fa-globe"></i> {% trans "Remote Services" %}</a></li>
           <li class="list-group-item"><a href="{% url "invitations:send-invite" %}"><i class="fa fa-edit"></i> {% trans "Invite User" %}</a></li>
           <li class="list-group-item"><a href="{{ GEOSERVER_BASE_URL }}"><i class="fa fa-gears"></i> {% trans "GeoServer" %}</a></li>
@@ -170,11 +170,11 @@
         {% endif_has_tag %}
       {% else %}
         {% if user.is_superuser %}
-        <ul class="list-group">
+        <ul class="list-group custom-profile-menu">
           <li class="list-group-item"><a href="{% url "profile_edit" profile.username %}"><i class="fa fa-edit"></i> {% trans "Edit profile" %}</a></li>
         </ul>
         {% endif %}
-        <ul class="list-group">
+        <ul class="list-group custom-profile-menu">
           <li class="list-group-item"><a href="{% url "user-activity" profile.username %}"><i class="fa fa-fire"></i> {% trans "User Activities" %}</a></li>
         </ul>
         {% if_has_tag if_relationship %}
