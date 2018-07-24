@@ -4,3 +4,11 @@
     background: transparent url("../img/logo1_200px.png") no-repeat scroll 10px 2px;
     background-size: contain;
  }
+
+ nav a.dropdown-toggle {
+     text-transform: uppercase;
+ }
+
+ nav a.avatar {
+     text-transform: lowercase;
+ }

@@ -24,13 +24,20 @@
                 <!--</div>-->
                 <!--<div class="col-xs-2">-->
                   <h4>
-                    <button
-                      class="btn btn-default btn-xs pull-right"
-                      ng-if="cart"
-                      ng-click="cart.toggleItem(item)"
-                      data-toggle="tooltip"
-                      data-placement="bottom"
-                      title="Select"><i ng-class="cart.getFaClass(item.id)" class="fa fa-lg"></i></button>
+
+                      <a href="{{ item.detail_url }}" target="_self" class="no-underline btn btn-default btn-xs ng-scope custom-button-wide">
+                      {% endverbatim %}
+                        {% trans "Show detail" %}
+                      {% verbatim %}
+                        </a>
+
+                       <button
+                          class="btn btn-default btn-xs pull-right"
+                          ng-if="cart"
+                          ng-click="cart.toggleItem(item)"
+                          data-toggle="tooltip"
+                          data-placement="bottom"
+                          title="Select"><i ng-class="cart.getFaClass(item.id)" class="fa fa-lg"></i></button>
                   </h4>
                 <!--</div>-->
               <!--</div>-->

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-04 03:50-0500\n"
+"POT-Creation-Date: 2018-07-24 09:58-0500\n"
 "PO-Revision-Date: 2014-06-18 02:48-0600\n"
 "Last-Translator: <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,650 +18,750 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Translated-Using: django-rosetta 0.7.4\n"
 
-#: dashboard.py:26
+#: geosk/dashboard.py:26
 msgid "Metadata Configuration & Registration"
 msgstr ""
 
-#: dashboard.py:35
+#: geosk/dashboard.py:35
 msgid "Administration & Applications"
 msgstr ""
 
-#: dashboard.py:40
+#: geosk/dashboard.py:40
 msgid "Administration"
 msgstr ""
 
-#: dashboard.py:46
+#: geosk/dashboard.py:46
 msgid "Applications"
 msgstr ""
 
-#: dashboard.py:56
+#: geosk/dashboard.py:56
 msgid "AppList: Applications"
 msgstr ""
 
-#: dashboard.py:64 skregistration/templates/skregistration/registration.html:5
+#: geosk/dashboard.py:64
+#: geosk/skregistration/templates/skregistration/registration.html:5
 msgid "GET-IT Registration"
 msgstr ""
 
-#: dashboard.py:68
+#: geosk/dashboard.py:68
 msgid "Register or check registration"
 msgstr ""
 
-#: dashboard.py:77
+#: geosk/dashboard.py:77
 msgid "Translations"
 msgstr ""
 
-#: dashboard.py:81
+#: geosk/dashboard.py:81
 msgid "Update translations"
 msgstr ""
 
-#: dashboard.py:84
+#: geosk/dashboard.py:84
 msgid "Update the translations for your languages"
 msgstr ""
 
-#: dashboard.py:87
+#: geosk/dashboard.py:87
 msgid "Rosetta Documentation"
 msgstr ""
 
-#: dashboard.py:96
+#: geosk/dashboard.py:96
 msgid "Recent Actions"
 msgstr ""
 
-#: dashboard.py:103
+#: geosk/dashboard.py:103
 msgid "GET-IT Front end"
 msgstr ""
 
-#: dashboard.py:107 templates/base_old.html:117
-#: templates/site_base_old.html:102
+#: geosk/dashboard.py:107 geosk/templates/base_old.html:117
+#: geosk/templates/site_base_old.html:102
 msgid "Home"
 msgstr ""
 
-#: dashboard.py:112 templates/base_old.html:120
-#: templates/site_base_old.html:105
+#: geosk/dashboard.py:112 geosk/templates/base.html:64
+#: geosk/templates/base.html.py:205 geosk/templates/base_old.html:120
+#: geosk/templates/site_base.html:27 geosk/templates/site_base_old.html:105
 msgid "Layers"
 msgstr ""
 
-#: dashboard.py:117 templates/base_old.html:123
-#: templates/site_base_old.html:118
+#: geosk/dashboard.py:117 geosk/templates/base.html:80
+#: geosk/templates/base.html.py:86 geosk/templates/base_old.html:123
+#: geosk/templates/site_base.html:43 geosk/templates/site_base.html.py:49
+#: geosk/templates/site_base_old.html:118
 msgid "Maps"
 msgstr "Views"
 
-#: dashboard.py:122 templates/base_old.html:128
-#: templates/site_base_old.html:114
+#: geosk/dashboard.py:122 geosk/templates/base.html:65
+#: geosk/templates/base.html.py:206 geosk/templates/base_old.html:128
+#: geosk/templates/site_base.html:28 geosk/templates/site_base_old.html:114
 msgid "Documents"
 msgstr ""
 
-#: dashboard.py:127 templates/base_old.html:132
-#: templates/site_base_old.html:121
+#: geosk/dashboard.py:127 geosk/templates/base.html:92
+#: geosk/templates/base.html.py:230 geosk/templates/base_old.html:132
+#: geosk/templates/site_base.html:56 geosk/templates/site_base_old.html:121
 msgid "People"
 msgstr ""
 
-#: dashboard.py:132 templates/base_old.html:135
-#: templates/search_old/advanced_search.html:4
-#: templates/search_old/advanced_search.html:10
-#: templates/site_base_old.html:124
+#: geosk/dashboard.py:132 geosk/templates/base_old.html:135
+#: geosk/templates/search_old/advanced_search.html:4
+#: geosk/templates/search_old/advanced_search.html:10
+#: geosk/templates/site_base_old.html:124
 msgid "Search"
 msgstr ""
 
-#: dashboard.py:137 templates/site_base.html:23
-#: templates/site_base_old.html:127
+#: geosk/dashboard.py:137 geosk/templates/site_base.html:89
+#: geosk/templates/site_base_old.html:127
 msgid "Services"
 msgstr ""
 
-#: dashboard.py:142
+#: geosk/dashboard.py:142
 msgid "Sos"
 msgstr ""
 
-#: demo/templates/demo/index.html:5 demo/templates/demo/index.html.py:13
+#: geosk/demo/templates/demo/index.html:5
+#: geosk/demo/templates/demo/index.html:13
 msgid "Demo"
 msgstr ""
 
-#: demo/templates/demo/index.html:15
+#: geosk/demo/templates/demo/index.html:15
 msgid ""
 "Please follow the link below to download the sample datasets you can use for "
 "thesting the GET-IT suite"
 msgstr ""
 
-#: demo/templates/demo/index.html:18
+#: geosk/demo/templates/demo/index.html:18
 msgid "Demo dataset"
 msgstr ""
 
-#: mdtools/admin.py:23 osk/templates/osk/osk_list.html:50
+#: geosk/mdtools/admin.py:23 geosk/osk/templates/osk/osk_list.html:50
 msgid "Provider"
 msgstr ""
 
-#: mdtools/admin.py:27
+#: geosk/mdtools/admin.py:27
 msgid "Contact"
 msgstr ""
 
-#: mdtools/models.py:48
+#: geosk/mdtools/models.py:48
 msgid "Metadata responsible party"
 msgstr ""
 
-#: mdtools/models.py:49
+#: geosk/mdtools/models.py:49
 msgid "Responsible party"
 msgstr ""
 
-#: mdtools/models.py:50
+#: geosk/mdtools/models.py:50
 msgid "Point of contact"
 msgstr ""
 
-#: mdtools/models.py:51
+#: geosk/mdtools/models.py:51
 msgid "Distributor"
 msgstr ""
 
-#: mdtools/models.py:56
+#: geosk/mdtools/models.py:56
 msgid "Scope"
 msgstr ""
 
-#: mdtools/models.py:75
+#: geosk/mdtools/models.py:75
 msgid "language"
 msgstr ""
 
-#: mdtools/models.py:75
+#: geosk/mdtools/models.py:75
 msgid "language used for metadata"
 msgstr "Lingua dei metadati"
 
-#: mdtools/models.py:76
+#: geosk/mdtools/models.py:76
 msgid "metadata date"
 msgstr ""
 
-#: mdtools/models.py:153
+#: geosk/mdtools/models.py:153
 msgid "node name"
 msgstr ""
 
-#: mdtools/models.py:153
+#: geosk/mdtools/models.py:153
 msgid "shorter than the title: e.g. acronym. This field is required"
 msgstr ""
 
-#: mdtools/models.py:154
+#: geosk/mdtools/models.py:154
 msgid "node title"
 msgstr ""
 
-#: mdtools/models.py:154 mdtools/models.py:158 mdtools/models.py:160
-#: mdtools/models.py:162
+#: geosk/mdtools/models.py:154 geosk/mdtools/models.py:158
+#: geosk/mdtools/models.py:160 geosk/mdtools/models.py:162
 msgid "This field is required"
 msgstr ""
 
-#: mdtools/models.py:155
+#: geosk/mdtools/models.py:155
 msgid "node abastract"
 msgstr ""
 
-#: mdtools/models.py:156
+#: geosk/mdtools/models.py:156
 msgid "keywords"
 msgstr ""
 
-#: mdtools/models.py:158
+#: geosk/mdtools/models.py:158
 msgid "organization name"
 msgstr ""
 
-#: mdtools/models.py:159
+#: geosk/mdtools/models.py:159
 msgid "provider url"
 msgstr ""
 
-#: mdtools/models.py:160
+#: geosk/mdtools/models.py:160
 msgid "contact name"
 msgstr ""
 
-#: mdtools/models.py:161
+#: geosk/mdtools/models.py:161
 msgid "contact position"
 msgstr ""
 
-#: mdtools/models.py:162
+#: geosk/mdtools/models.py:162
 msgid "contact email"
 msgstr ""
 
-#: mdtools/models.py:163
+#: geosk/mdtools/models.py:163
 msgid "contact url"
 msgstr ""
 
-#: mdtools/models.py:164
+#: geosk/mdtools/models.py:164
 msgid "contact address"
 msgstr ""
 
-#: mdtools/models.py:165
+#: geosk/mdtools/models.py:165
 msgid "contact city"
 msgstr ""
 
-#: mdtools/models.py:166
+#: geosk/mdtools/models.py:166
 msgid "contact state or province"
 msgstr ""
 
-#: mdtools/models.py:167
+#: geosk/mdtools/models.py:167
 msgid "contact postalcode"
 msgstr ""
 
-#: mdtools/models.py:168
+#: geosk/mdtools/models.py:168
 msgid "contact country"
 msgstr ""
 
-#: mdtools/models.py:169
+#: geosk/mdtools/models.py:169
 msgid "contact phone"
 msgstr ""
 
-#: mdtools/models.py:170
+#: geosk/mdtools/models.py:170
 msgid "contact fax"
 msgstr ""
 
-#: mdtools/models.py:171
+#: geosk/mdtools/models.py:171
 msgid "contact hours"
 msgstr ""
 
-#: mdtools/models.py:172
+#: geosk/mdtools/models.py:172
 msgid "contact instructions"
 msgstr ""
 
-#: mdtools/models.py:173
+#: geosk/mdtools/models.py:173
 msgid "contact role"
 msgstr ""
 
-#: mdtools/models.py:176
+#: geosk/mdtools/models.py:176
 msgid "Services metadata"
 msgstr ""
 
-#: mdtools/templates/base/resourcebase_info_panel.html:7
-#: osk/templates/osk/osk_list.html:43
+#: geosk/mdtools/templates/base/resourcebase_info_panel.html:7
+#: geosk/osk/templates/osk/osk_list.html:43
 msgid "Title"
 msgstr ""
 
-#: mdtools/templates/base/resourcebase_info_panel.html:14
-#: osk/templates/osk/osk_list.html:45
+#: geosk/mdtools/templates/base/resourcebase_info_panel.html:14
+#: geosk/osk/templates/osk/osk_list.html:45
 msgid "Abstract"
 msgstr ""
 
-#: mdtools/templates/base/resourcebase_info_panel.html:21
-#: templates/search_old/_general_filters.html:5
+#: geosk/mdtools/templates/base/resourcebase_info_panel.html:21
+#: geosk/templates/search_old/_general_filters.html:5
 msgid "Date"
 msgstr ""
 
-#: mdtools/templates/base/resourcebase_info_panel.html:28
-#: mdtools/templates/layers/layer_detail.html:683
+#: geosk/mdtools/templates/base/resourcebase_info_panel.html:28
+#: geosk/mdtools/templates/layers/layer_detail.html:683
+#: geosk/templates/layers/layer_detail.html:491
 msgid "Type"
 msgstr ""
 
-#: mdtools/templates/base/resourcebase_info_panel.html:35
-#: osk/templates/osk/osk_list.html:47
-#: templates/search_old/_general_filters.html:16
+#: geosk/mdtools/templates/base/resourcebase_info_panel.html:35
+#: geosk/osk/templates/osk/osk_list.html:47
+#: geosk/templates/people/profile_detail.html:109
+#: geosk/templates/search_old/_general_filters.html:16
 msgid "Keywords"
 msgstr ""
 
-#: mdtools/templates/base/resourcebase_info_panel.html:44
+#: geosk/mdtools/templates/base/resourcebase_info_panel.html:44
 msgid "Category"
 msgstr ""
 
-#: mdtools/templates/base/resourcebase_info_panel.html:51
+#: geosk/mdtools/templates/base/resourcebase_info_panel.html:51
 msgid "Regions"
 msgstr ""
 
-#: mdtools/templates/base/resourcebase_info_panel.html:58
+#: geosk/mdtools/templates/base/resourcebase_info_panel.html:58
 msgid "License"
 msgstr ""
 
-#: mdtools/templates/base/resourcebase_info_panel.html:80
-#: mdtools/templates/base/resourcebase_info_panel.html:88
+#: geosk/mdtools/templates/base/resourcebase_info_panel.html:80
+#: geosk/mdtools/templates/base/resourcebase_info_panel.html:88
 msgid "GET-IT User"
 msgstr ""
 
-#: mdtools/templates/base/resourcebase_info_panel.html:95
-#: mdtools/templates/layers_old/layer_detail.html:257
-#: templates/documents_old/document_detail.html:140
+#: geosk/mdtools/templates/base/resourcebase_info_panel.html:95
+#: geosk/mdtools/templates/layers_old/layer_detail.html:257
+#: geosk/templates/documents_old/document_detail.html:140
 msgid "Point of Contact"
 msgstr ""
 
-#: mdtools/templates/base/resourcebase_info_panel.html:102
+#: geosk/mdtools/templates/base/resourcebase_info_panel.html:102
 msgid "Show/Hide"
 msgstr ""
 
-#: mdtools/templates/base/resourcebase_info_panel.html:108
+#: geosk/mdtools/templates/base/resourcebase_info_panel.html:108
 msgid "Maintenance Frequency"
 msgstr ""
 
-#: mdtools/templates/base/resourcebase_info_panel.html:115
+#: geosk/mdtools/templates/base/resourcebase_info_panel.html:115
 msgid "Restrictions"
 msgstr ""
 
-#: mdtools/templates/base/resourcebase_info_panel.html:126
+#: geosk/mdtools/templates/base/resourcebase_info_panel.html:126
 msgid "Edition"
 msgstr ""
 
-#: mdtools/templates/base/resourcebase_info_panel.html:133
+#: geosk/mdtools/templates/base/resourcebase_info_panel.html:133
 msgid "Purpose"
 msgstr ""
 
-#: mdtools/templates/base/resourcebase_info_panel.html:140
-#: templates/base_old.html:200 templates/site_base.html:41
-#: templates/site_base_old.html:183
+#: geosk/mdtools/templates/base/resourcebase_info_panel.html:140
+#: geosk/templates/base.html:247 geosk/templates/base_old.html:200
+#: geosk/templates/site_base_old.html:183
 msgid "Language"
 msgstr ""
 
-#: mdtools/templates/base/resourcebase_info_panel.html:147
+#: geosk/mdtools/templates/base/resourcebase_info_panel.html:147
 msgid "Temporal Extent"
 msgstr ""
 
-#: mdtools/templates/base/resourcebase_info_panel.html:154
+#: geosk/mdtools/templates/base/resourcebase_info_panel.html:154
 msgid "Data Quality"
 msgstr ""
 
-#: mdtools/templates/base/resourcebase_info_panel.html:161
+#: geosk/mdtools/templates/base/resourcebase_info_panel.html:161
 msgid "Supplemental Information"
 msgstr ""
 
-#: mdtools/templates/base/resourcebase_info_panel.html:168
+#: geosk/mdtools/templates/base/resourcebase_info_panel.html:168
 msgid "Spatial Representation Type"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:77
+#: geosk/mdtools/templates/layers/layer_detail.html:77
+#: geosk/templates/layers/layer_detail.html:97
 msgid "Layer WMS GetCapabilities document"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:87
+#: geosk/mdtools/templates/layers/layer_detail.html:87
+#: geosk/templates/layers/layer_detail.html:515
 msgid "Filter Granules"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:90
+#: geosk/mdtools/templates/layers/layer_detail.html:90
+#: geosk/templates/layers/layer_detail.html:518
 msgid "Active Filter:"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:96
+#: geosk/mdtools/templates/layers/layer_detail.html:96
+#: geosk/templates/layers/layer_detail.html:524
 msgid "Granule ID"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:97
+#: geosk/mdtools/templates/layers/layer_detail.html:97
+#: geosk/templates/layers/layer_detail.html:525
 msgid "Bounding Box"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:98
+#: geosk/mdtools/templates/layers/layer_detail.html:98
+#: geosk/templates/layers/layer_detail.html:526
 msgid "Time"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:99
+#: geosk/mdtools/templates/layers/layer_detail.html:99
+#: geosk/templates/layers/layer_detail.html:527
 msgid "Elevation"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:100
+#: geosk/mdtools/templates/layers/layer_detail.html:100
+#: geosk/templates/layers/layer_detail.html:528
 msgid "Actions"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:162
+#: geosk/mdtools/templates/layers/layer_detail.html:162
+#: geosk/templates/layers/layer_detail.html:590
 msgid "Dimension"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:163
+#: geosk/mdtools/templates/layers/layer_detail.html:163
+#: geosk/templates/layers/layer_detail.html:591
 msgid "Enabled"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:164
+#: geosk/mdtools/templates/layers/layer_detail.html:164
+#: geosk/templates/layers/layer_detail.html:592
 msgid "Regex"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:169
+#: geosk/mdtools/templates/layers/layer_detail.html:169
+#: geosk/templates/layers/layer_detail.html:597
 msgid "TIME"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:170
-#: mdtools/templates/layers/layer_detail.html:175
+#: geosk/mdtools/templates/layers/layer_detail.html:170
+#: geosk/mdtools/templates/layers/layer_detail.html:175
+#: geosk/templates/layers/layer_detail.html:598
+#: geosk/templates/layers/layer_detail.html:603
 msgid "True"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:170
-#: mdtools/templates/layers/layer_detail.html:175
+#: geosk/mdtools/templates/layers/layer_detail.html:170
+#: geosk/mdtools/templates/layers/layer_detail.html:175
+#: geosk/templates/layers/layer_detail.html:598
+#: geosk/templates/layers/layer_detail.html:603
 msgid "False"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:174
+#: geosk/mdtools/templates/layers/layer_detail.html:174
+#: geosk/templates/layers/layer_detail.html:602
 msgid "ELEVATION"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:185
-#: mdtools/templates/layers_old/layer_detail.html:95
+#: geosk/mdtools/templates/layers/layer_detail.html:185
+#: geosk/mdtools/templates/layers_old/layer_detail.html:95
+#: geosk/templates/layers/layer_detail.html:613
 msgid "Attribute Name"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:186
+#: geosk/mdtools/templates/layers/layer_detail.html:186
+#: geosk/templates/layers/layer_detail.html:614
 msgid "Label"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:187
+#: geosk/mdtools/templates/layers/layer_detail.html:187
+#: geosk/templates/layers/layer_detail.html:615
+#: geosk/templates/people/profile_detail.html:104
 msgid "Description"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:189
-#: mdtools/templates/layers_old/layer_detail.html:96
+#: geosk/mdtools/templates/layers/layer_detail.html:189
+#: geosk/mdtools/templates/layers_old/layer_detail.html:96
+#: geosk/templates/layers/layer_detail.html:617
 msgid "Range"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:190
-#: mdtools/templates/layers_old/layer_detail.html:97
+#: geosk/mdtools/templates/layers/layer_detail.html:190
+#: geosk/mdtools/templates/layers_old/layer_detail.html:97
+#: geosk/templates/layers/layer_detail.html:618
 msgid "Average"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:191
-#: mdtools/templates/layers_old/layer_detail.html:98
+#: geosk/mdtools/templates/layers/layer_detail.html:191
+#: geosk/mdtools/templates/layers_old/layer_detail.html:98
+#: geosk/templates/layers/layer_detail.html:619
 msgid "Median"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:192
-#: mdtools/templates/layers_old/layer_detail.html:99
+#: geosk/mdtools/templates/layers/layer_detail.html:192
+#: geosk/mdtools/templates/layers_old/layer_detail.html:99
+#: geosk/templates/layers/layer_detail.html:620
 msgid "Standard Deviation"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:253
-#: mdtools/templates/layers_old/layer_detail.html:140
+#: geosk/mdtools/templates/layers/layer_detail.html:253
+#: geosk/mdtools/templates/layers_old/layer_detail.html:140
+#: geosk/templates/layers/layer_detail.html:681
 msgid "Rate this layer"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:257
-#: mdtools/templates/layers_old/layer_detail.html:144
-#: templates/documents_old/document_detail.html:103
+#: geosk/mdtools/templates/layers/layer_detail.html:257
+#: geosk/mdtools/templates/layers_old/layer_detail.html:144
+#: geosk/templates/documents_old/document_detail.html:103
+#: geosk/templates/layers/layer_detail.html:685
+#: geosk/templates/maps/map_detail.html:280
 msgid "Average Rating"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:273
-#: mdtools/templates/layers/layer_detail.html:286
-#: mdtools/templates/layers_old/_layer_list_item.html:50
-#: mdtools/templates/layers_old/layer_detail.html:29
+#: geosk/mdtools/templates/layers/layer_detail.html:273
+#: geosk/mdtools/templates/layers/layer_detail.html:286
+#: geosk/mdtools/templates/layers_old/_layer_list_item.html:50
+#: geosk/mdtools/templates/layers_old/layer_detail.html:29
+#: geosk/templates/layers/layer_detail.html:105
+#: geosk/templates/layers/layer_detail.html:192
 msgid "Download Layer"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:276
+#: geosk/mdtools/templates/layers/layer_detail.html:276
+#: geosk/templates/layers/layer_detail.html:108
 msgid "Request Download"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:320
+#: geosk/mdtools/templates/layers/layer_detail.html:320
+#: geosk/templates/layers/layer_detail.html:226
 msgid "Do you want to filter it?"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:323
+#: geosk/mdtools/templates/layers/layer_detail.html:323
+#: geosk/templates/layers/layer_detail.html:229
 msgid "Loading..."
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:327
+#: geosk/mdtools/templates/layers/layer_detail.html:327
+#: geosk/templates/layers/layer_detail.html:233
 msgid "Filter by attributes"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:334
+#: geosk/mdtools/templates/layers/layer_detail.html:334
+#: geosk/templates/layers/layer_detail.html:240
 msgid "Match"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:349
+#: geosk/mdtools/templates/layers/layer_detail.html:349
+#: geosk/templates/layers/layer_detail.html:255
 #, fuzzy
 #| msgid "This action affects the following maps:"
 msgid "of the following:"
 msgstr "This action affects the following views:"
 
-#: mdtools/templates/layers/layer_detail.html:356
+#: geosk/mdtools/templates/layers/layer_detail.html:356
+#: geosk/templates/layers/layer_detail.html:262
 msgid "Attribute"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:373
+#: geosk/mdtools/templates/layers/layer_detail.html:373
+#: geosk/templates/layers/layer_detail.html:279
 msgid "Operator"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:407
+#: geosk/mdtools/templates/layers/layer_detail.html:407
+#: geosk/templates/layers/layer_detail.html:313
 msgid "Pick your download format:"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:420
-#: mdtools/templates/layers/layer_detail.html:515
-#: mdtools/templates/layers/layer_detail.html:563
-#: skregistration/templates/skregistration/registration.html:73
+#: geosk/mdtools/templates/layers/layer_detail.html:420
+#: geosk/mdtools/templates/layers/layer_detail.html:515
+#: geosk/mdtools/templates/layers/layer_detail.html:563
+#: geosk/skregistration/templates/skregistration/registration.html:73
+#: geosk/templates/layers/layer_detail.html:182
+#: geosk/templates/layers/layer_detail.html:326
+#: geosk/templates/layers/layer_detail.html:387
+#: geosk/templates/maps/map_detail.html:121
+#: geosk/templates/maps/map_detail.html:158
+#: geosk/templates/maps/map_detail.html:311
+#: geosk/templates/maps/map_detail.html:331
 msgid "Close"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:436
+#: geosk/mdtools/templates/layers/layer_detail.html:436
+#: geosk/templates/layers/layer_detail.html:344
+#: geosk/templates/maps/map_detail.html:137
 msgid "Metadata Detail"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:443
-#: mdtools/templates/layers/layer_detail.html:462
-#: mdtools/templates/layers/layer_detail.html:474
-#: mdtools/templates/layers/layer_detail.html:486
+#: geosk/mdtools/templates/layers/layer_detail.html:443
+#: geosk/mdtools/templates/layers/layer_detail.html:462
+#: geosk/mdtools/templates/layers/layer_detail.html:474
+#: geosk/mdtools/templates/layers/layer_detail.html:486
+#: geosk/templates/layers/layer_detail.html:141
+#: geosk/templates/layers/layer_detail.html:153
+#: geosk/templates/maps/map_detail.html:114
 #, fuzzy
 #| msgid "Edit Map"
 msgid "Edit"
 msgstr "Edit View"
 
-#: mdtools/templates/layers/layer_detail.html:447
-#: mdtools/templates/layers/layer_detail.html:454
-#: mdtools/templates/layers_old/layer_detail.html:55
+#: geosk/mdtools/templates/layers/layer_detail.html:447
+#: geosk/mdtools/templates/layers/layer_detail.html:454
+#: geosk/mdtools/templates/layers_old/layer_detail.html:55
+#: geosk/templates/layers/layer_detail.html:113
+#: geosk/templates/layers/layer_detail.html:122
 msgid "Edit Layer"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:461
-#: skregistration/templates/skregistration/registration.html:41
+#: geosk/mdtools/templates/layers/layer_detail.html:461
+#: geosk/skregistration/templates/skregistration/registration.html:41
+#: geosk/templates/layers/layer_detail.html:129
+#: geosk/templates/maps/map_detail.html:98
 msgid "Metadata"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:463
+#: geosk/mdtools/templates/layers/layer_detail.html:463
+#: geosk/templates/layers/layer_detail.html:130
+#: geosk/templates/maps/map_detail.html:99
 msgid "Wizard"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:464
+#: geosk/mdtools/templates/layers/layer_detail.html:464
+#: geosk/templates/layers/layer_detail.html:131
+#: geosk/templates/maps/map_detail.html:100
 msgid "Advanced Edit"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:465
+#: geosk/mdtools/templates/layers/layer_detail.html:465
+#: geosk/templates/layers/layer_detail.html:132
 #, fuzzy
 #| msgid "Edit Map Metadata"
 msgid "Upload Metadata"
 msgstr "Edit View Metadata"
 
-#: mdtools/templates/layers/layer_detail.html:472
-#: mdtools/templates/layers/layer_detail.html:485
-#: mdtools/templates/layers/layer_detail.html:633
-#: mdtools/templates/layers_old/layer_detail.html:232
+#: geosk/mdtools/templates/layers/layer_detail.html:472
+#: geosk/mdtools/templates/layers/layer_detail.html:485
+#: geosk/mdtools/templates/layers/layer_detail.html:633
+#: geosk/mdtools/templates/layers_old/layer_detail.html:232
+#: geosk/templates/layers/layer_detail.html:139
+#: geosk/templates/layers/layer_detail.html:152
+#: geosk/templates/layers/layer_detail.html:441
 msgid "Styles"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:476 templates/base_old.html:71
-#: templates/site_base_old.html:53
+#: geosk/mdtools/templates/layers/layer_detail.html:476
+#: geosk/templates/base_old.html:71
+#: geosk/templates/layers/layer_detail.html:143
+#: geosk/templates/site_base_old.html:53
 msgid "Upload"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:477
+#: geosk/mdtools/templates/layers/layer_detail.html:477
+#: geosk/templates/layers/layer_detail.html:144
 msgid "Manage"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:493
+#: geosk/mdtools/templates/layers/layer_detail.html:493
+#: geosk/templates/layers/layer_detail.html:160
+#: geosk/templates/maps/map_detail.html:106
 #, fuzzy
 #| msgid "Set Map Thumbnail"
 msgid "Thumbnail"
 msgstr "Set View Thumbnail"
 
-#: mdtools/templates/layers/layer_detail.html:494
+#: geosk/mdtools/templates/layers/layer_detail.html:494
+#: geosk/templates/layers/layer_detail.html:161
+#: geosk/templates/maps/map_detail.html:107
 msgid "Set"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:500 templates/site_index.html:35
+#: geosk/mdtools/templates/layers/layer_detail.html:500
+#: geosk/templates/layers/layer_detail.html:167
+#: geosk/templates/site_index.html:46
 #, fuzzy
 #| msgid "Map Layers"
 msgid "Layer"
 msgstr "View Layers"
 
-#: mdtools/templates/layers/layer_detail.html:502
+#: geosk/mdtools/templates/layers/layer_detail.html:502
+#: geosk/templates/layers/layer_detail.html:169
 msgid "Replace"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:505
+#: geosk/mdtools/templates/layers/layer_detail.html:505
+#: geosk/templates/layers/layer_detail.html:172
 #, fuzzy
 #| msgid "Edit Map"
 msgid "Edit data"
 msgstr "Edit View"
 
-#: mdtools/templates/layers/layer_detail.html:508
+#: geosk/mdtools/templates/layers/layer_detail.html:508
+#: geosk/templates/layers/layer_detail.html:175
+#: geosk/templates/maps/map_detail.html:115
 msgid "Remove"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:525
-#: mdtools/templates/layers/layer_detail.html:533
-#: mdtools/templates/layers_old/layer_detail.html:41
-#: templates/documents_old/document_detail.html:33
+#: geosk/mdtools/templates/layers/layer_detail.html:525
+#: geosk/mdtools/templates/layers/layer_detail.html:533
+#: geosk/mdtools/templates/layers_old/layer_detail.html:41
+#: geosk/templates/documents_old/document_detail.html:33
+#: geosk/templates/layers/layer_detail.html:349
+#: geosk/templates/layers/layer_detail.html:357
 msgid "Download Metadata"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:571
-#: mdtools/templates/layers_old/layer_detail.html:186
+#: geosk/mdtools/templates/layers/layer_detail.html:571
+#: geosk/mdtools/templates/layers_old/layer_detail.html:186
+#: geosk/templates/layers/layer_detail.html:75
 msgid "Legend"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:585
-#: mdtools/templates/layers_old/layer_detail.html:192
+#: geosk/mdtools/templates/layers/layer_detail.html:585
+#: geosk/mdtools/templates/layers_old/layer_detail.html:192
+#: geosk/templates/layers/layer_detail.html:395
 msgid "Maps using this layer"
 msgstr "Views using this layer"
 
-#: mdtools/templates/layers/layer_detail.html:587
-#: mdtools/templates/layers_old/layer_detail.html:194
+#: geosk/mdtools/templates/layers/layer_detail.html:587
+#: geosk/mdtools/templates/layers_old/layer_detail.html:194
+#: geosk/templates/layers/layer_detail.html:397
 msgid "List of maps using this layer:"
 msgstr "List of views using this layer:"
 
-#: mdtools/templates/layers/layer_detail.html:593
-#: mdtools/templates/layers_old/layer_detail.html:200
+#: geosk/mdtools/templates/layers/layer_detail.html:593
+#: geosk/mdtools/templates/layers_old/layer_detail.html:200
+#: geosk/templates/layers/layer_detail.html:403
 msgid "This layer is not currently used in any maps."
 msgstr "This layer is not currently used in any views."
 
-#: mdtools/templates/layers/layer_detail.html:598
-#: mdtools/templates/layers_old/layer_detail.html:216
+#: geosk/mdtools/templates/layers/layer_detail.html:598
+#: geosk/mdtools/templates/layers_old/layer_detail.html:216
+#: geosk/templates/layers/layer_detail.html:408
 msgid "Create a map using this layer"
 msgstr "Create a view using this layer"
 
-#: mdtools/templates/layers/layer_detail.html:599
-#: mdtools/templates/layers_old/layer_detail.html:217
+#: geosk/mdtools/templates/layers/layer_detail.html:599
+#: geosk/mdtools/templates/layers_old/layer_detail.html:217
 msgid "Click the button below to generate a new map based on this layer."
 msgstr "Click the button below to generate a new view based on this layer."
 
-#: mdtools/templates/layers/layer_detail.html:600
-#: mdtools/templates/layers_old/layer_detail.html:218
-#: templates/site_index_old.html:88
+#: geosk/mdtools/templates/layers/layer_detail.html:600
+#: geosk/mdtools/templates/layers_old/layer_detail.html:218
+#: geosk/templates/base/_resourcebase_snippet.html:55
+#: geosk/templates/search/_search_content.html:16
+#: geosk/templates/site_index_old.html:88
 msgid "Create a Map"
 msgstr "Create a View"
 
-#: mdtools/templates/layers/layer_detail.html:604
+#: geosk/mdtools/templates/layers/layer_detail.html:604
+#: geosk/templates/layers/layer_detail.html:412
 msgid "Add the layer to an existing map"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:612
+#: geosk/mdtools/templates/layers/layer_detail.html:612
+#: geosk/templates/layers/layer_detail.html:420
 #, fuzzy
 #| msgid "Click the button below to generate a new map based on this layer."
 msgid "Click the button below to add the layer to the selected map."
 msgstr "Click the button below to generate a new view based on this layer."
 
-#: mdtools/templates/layers/layer_detail.html:614
+#: geosk/mdtools/templates/layers/layer_detail.html:614
+#: geosk/templates/layers/layer_detail.html:422
 #, fuzzy
 #| msgid "Edit Map"
 msgid "Add to Map"
 msgstr "Edit View"
 
-#: mdtools/templates/layers/layer_detail.html:621
-#: mdtools/templates/layers_old/layer_detail.html:206
+#: geosk/mdtools/templates/layers/layer_detail.html:621
+#: geosk/mdtools/templates/layers_old/layer_detail.html:206
+#: geosk/templates/layers/layer_detail.html:429
 msgid "Documents related to this layer"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:622
-#: mdtools/templates/layers_old/layer_detail.html:207
+#: geosk/mdtools/templates/layers/layer_detail.html:622
+#: geosk/mdtools/templates/layers_old/layer_detail.html:207
+#: geosk/templates/layers/layer_detail.html:430
 msgid "List of documents related to this layer:"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:634
-#: mdtools/templates/layers_old/layer_detail.html:233
+#: geosk/mdtools/templates/layers/layer_detail.html:634
+#: geosk/mdtools/templates/layers_old/layer_detail.html:233
+#: geosk/templates/layers/layer_detail.html:442
 msgid ""
 "The following styles are associated with this layer. Choose a style to view "
 "it in the preview map."
@@ -669,362 +769,379 @@ msgstr ""
 "The following styles are associated with this layer. Choose a style to view "
 "it in the preview view."
 
-#: mdtools/templates/layers/layer_detail.html:648
-#: mdtools/templates/layers/layer_detail.html:662
-#: mdtools/templates/layers_old/layer_detail.html:246
+#: geosk/mdtools/templates/layers/layer_detail.html:648
+#: geosk/mdtools/templates/layers/layer_detail.html:662
+#: geosk/mdtools/templates/layers_old/layer_detail.html:246
+#: geosk/templates/layers/layer_detail.html:456
+#: geosk/templates/layers/layer_detail.html:470
 msgid "No styles associated with this layer"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:672
-#: mdtools/templates/layers_old/layer_detail.html:224
-#: templates/documents_old/document_detail.html:129
+#: geosk/mdtools/templates/layers/layer_detail.html:672
+#: geosk/mdtools/templates/layers_old/layer_detail.html:224
+#: geosk/templates/documents_old/document_detail.html:129
+#: geosk/templates/layers/layer_detail.html:480
+#: geosk/templates/maps/map_detail.html:202
 msgid "Permissions"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:673
-#: mdtools/templates/layers_old/layer_detail.html:225
+#: geosk/mdtools/templates/layers/layer_detail.html:673
+#: geosk/mdtools/templates/layers_old/layer_detail.html:225
+#: geosk/templates/layers/layer_detail.html:481
 msgid "Click the button below to change the permissions of this layer."
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:674
-#: mdtools/templates/layers_old/layer_detail.html:226
+#: geosk/mdtools/templates/layers/layer_detail.html:674
+#: geosk/mdtools/templates/layers_old/layer_detail.html:226
+#: geosk/templates/layers/layer_detail.html:482
 msgid "Change Layer Permissions"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:681
+#: geosk/mdtools/templates/layers/layer_detail.html:681
+#: geosk/templates/layers/layer_detail.html:489
 msgid "External service layer"
 msgstr ""
 
-#: mdtools/templates/layers/layer_detail.html:682
+#: geosk/mdtools/templates/layers/layer_detail.html:682
+#: geosk/templates/layers/layer_detail.html:490
 msgid "Source"
 msgstr ""
 
-#: mdtools/templates/layers_old/_layer_list_item.html:18
+#: geosk/mdtools/templates/layers_old/_layer_list_item.html:18
 msgid "Layer from"
 msgstr ""
 
-#: mdtools/templates/layers_old/_layer_list_item.html:18
-#: templates/documents_old/_document_list_item.html:18
-#: templates/maps_old/_map_list_item.html:17
+#: geosk/mdtools/templates/layers_old/_layer_list_item.html:18
+#: geosk/templates/documents_old/_document_list_item.html:18
+#: geosk/templates/maps_old/_map_list_item.html:17
 msgid "ago"
 msgstr ""
 
-#: mdtools/templates/layers_old/_layer_list_item.html:21
-#: templates/documents_old/_document_list_item.html:21
-#: templates/maps_old/_map_list_item.html:20
+#: geosk/mdtools/templates/layers_old/_layer_list_item.html:21
+#: geosk/templates/documents_old/_document_list_item.html:21
+#: geosk/templates/maps_old/_map_list_item.html:20
 msgid "view "
 msgid_plural "views "
 msgstr[0] ""
 msgstr[1] ""
 
-#: mdtools/templates/layers_old/_layer_list_item.html:22
-#: templates/documents_old/_document_list_item.html:23
-#: templates/maps_old/_map_list_item.html:21
+#: geosk/mdtools/templates/layers_old/_layer_list_item.html:22
+#: geosk/templates/documents_old/_document_list_item.html:23
+#: geosk/templates/maps_old/_map_list_item.html:21
 msgid "Average rating"
 msgstr ""
 
-#: mdtools/templates/layers_old/_layer_list_item.html:22
-#: templates/documents_old/_document_list_item.html:23
-#: templates/maps_old/_map_list_item.html:21
+#: geosk/mdtools/templates/layers_old/_layer_list_item.html:22
+#: geosk/templates/documents_old/_document_list_item.html:23
+#: geosk/templates/maps_old/_map_list_item.html:21
 msgid "votes"
 msgstr ""
 
-#: mdtools/templates/layers_old/_layer_list_item.html:32
+#: geosk/mdtools/templates/layers_old/_layer_list_item.html:32
 msgid "Metadata Completeness"
 msgstr ""
 
-#: mdtools/templates/layers_old/_layer_list_item.html:39
-#: templates/documents_old/_document_list_item.html:27
-#: templates/maps_old/_map_list_item.html:26
+#: geosk/mdtools/templates/layers_old/_layer_list_item.html:39
+#: geosk/templates/documents_old/_document_list_item.html:27
+#: geosk/templates/maps_old/_map_list_item.html:26
 msgid "Download"
 msgstr ""
 
-#: mdtools/templates/layers_old/_layer_list_item.html:40
+#: geosk/mdtools/templates/layers_old/_layer_list_item.html:40
 msgid "Create a map"
 msgstr "Create a view"
 
-#: mdtools/templates/layers_old/layer_detail.html:61
-#: templates/documents_old/document_detail.html:50
+#: geosk/mdtools/templates/layers_old/layer_detail.html:61
+#: geosk/templates/documents_old/document_detail.html:50
 msgid "Edit Metadata"
 msgstr ""
 
-#: mdtools/templates/layers_old/layer_detail.html:63
+#: geosk/mdtools/templates/layers_old/layer_detail.html:63
 msgid "Edit Metadata (RNDT)"
 msgstr ""
 
-#: mdtools/templates/layers_old/layer_detail.html:66
-#: templates/documents_old/document_detail.html:51
+#: geosk/mdtools/templates/layers_old/layer_detail.html:66
+#: geosk/templates/documents_old/document_detail.html:51
 msgid "Edit Permissions"
 msgstr ""
 
-#: mdtools/templates/layers_old/layer_detail.html:68
+#: geosk/mdtools/templates/layers_old/layer_detail.html:68
 msgid "Manage Styles"
 msgstr ""
 
-#: mdtools/templates/layers_old/layer_detail.html:69
+#: geosk/mdtools/templates/layers_old/layer_detail.html:69
 msgid "Edit Styles"
 msgstr ""
 
-#: mdtools/templates/layers_old/layer_detail.html:70
+#: geosk/mdtools/templates/layers_old/layer_detail.html:70
 msgid "Replace this Layer"
 msgstr ""
 
-#: mdtools/templates/layers_old/layer_detail.html:71
+#: geosk/mdtools/templates/layers_old/layer_detail.html:71
 msgid "Remove this Layer"
 msgstr ""
 
-#: mdtools/templates/layers_old/layer_detail.html:252
-#: templates/base_old.html:193 templates/documents_old/document_detail.html:135
-#: templates/site_base_old.html:167
+#: geosk/mdtools/templates/layers_old/layer_detail.html:252
+#: geosk/templates/base.html:245 geosk/templates/base_old.html:193
+#: geosk/templates/documents_old/document_detail.html:135
+#: geosk/templates/site_base_old.html:167
 msgid "About"
 msgstr ""
 
-#: mdtools/templates/layers_old/layer_detail.html:253
+#: geosk/mdtools/templates/layers_old/layer_detail.html:253
 msgid "Layer Owner"
 msgstr ""
 
-#: mdtools/templates/layers_old/layer_detail.html:261
-#: templates/documents_old/document_detail.html:144
+#: geosk/mdtools/templates/layers_old/layer_detail.html:261
+#: geosk/templates/documents_old/document_detail.html:144
 msgid "Metadata Author"
 msgstr ""
 
-#: mdtools/templates/layers_old/layer_list.html:9
-#: templates/site_index_old.html:46
+#: geosk/mdtools/templates/layers_old/layer_list.html:9
+#: geosk/templates/layers/layer_list.html:6
+#: geosk/templates/layers/layer_list.html:18
+#: geosk/templates/site_index_old.html:46
 msgid "Explore Layers"
 msgstr ""
 
-#: mdtools/templates/layers_old/layer_list.html:15
+#: geosk/mdtools/templates/layers_old/layer_list.html:15
 msgid "Explore Layer"
 msgstr ""
 
-#: mdtools/templates/layers_old/layer_list.html:30
+#: geosk/mdtools/templates/layers_old/layer_list.html:30
 msgid "Your selections"
 msgstr ""
 
-#: mdtools/templates/layers_old/layer_list.html:31
+#: geosk/mdtools/templates/layers_old/layer_list.html:31
 msgid "Clear all"
 msgstr ""
 
-#: mdtools/templates/mdtools/edi_headers.html:66
+#: geosk/mdtools/templates/mdtools/edi_headers.html:66
 msgid ""
 "Some of the Mandatory fields are not filled.  Please verify your data and "
 "try again."
 msgstr ""
 
-#: mdtools/templates/mdtools/rndt.html:25
+#: geosk/mdtools/templates/mdtools/rndt.html:25
 msgid "RNDT/INSPIRE compliance"
 msgstr ""
 
-#: mdtools/templates/mdtools/rndt.html:29
-#: osk/templates/osk/osk_registration.html:29
+#: geosk/mdtools/templates/mdtools/rndt.html:29
+#: geosk/osk/templates/osk/osk_registration.html:29
 msgid "Mandatory"
 msgstr ""
 
-#: mdtools/templates/mdtools/rndt.html:30
-#: osk/templates/osk/osk_registration.html:30
+#: geosk/mdtools/templates/mdtools/rndt.html:30
+#: geosk/osk/templates/osk/osk_registration.html:30
 msgid "Optional"
 msgstr ""
 
-#: mdtools/templates/mdtools/rndt.html:38
+#: geosk/mdtools/templates/mdtools/rndt.html:38
 msgid "Uploading ... "
 msgstr ""
 
-#: mdtools/templates/mdtools/rndt.html:50
+#: geosk/mdtools/templates/mdtools/rndt.html:50
 msgid "Oh snap! You got an error!"
 msgstr ""
 
-#: mdtools/templates/mdtools/rndt_block.html:1
-#: osk/templates/osk/sensorml_block.html:2466
+#: geosk/mdtools/templates/mdtools/rndt_block.html:1
+#: geosk/osk/templates/osk/sensorml_block.html:2466
 msgid "Update metadata"
 msgstr ""
 
-#: osk/templates/osk/osk_base.html:20 osk/templates/osk/osk_list.html:7
-#: osk/templates/osk/osk_list.html.py:16
+#: geosk/osk/templates/osk/osk_base.html:20
+#: geosk/osk/templates/osk/osk_list.html:7
+#: geosk/osk/templates/osk/osk_list.html:16
 msgid "Explore SOS"
 msgstr ""
 
-#: osk/templates/osk/osk_base.html:21
+#: geosk/osk/templates/osk/osk_base.html:21
 msgid "Upload Observations"
 msgstr ""
 
-#: osk/templates/osk/osk_deletesensor.html:7
-#: osk/templates/osk/osk_list.html:110
+#: geosk/osk/templates/osk/osk_deletesensor.html:7
+#: geosk/osk/templates/osk/osk_list.html:110
 msgid "Delete sensor"
 msgstr ""
 
-#: osk/templates/osk/osk_deletesensor.html:14
+#: geosk/osk/templates/osk/osk_deletesensor.html:14
 msgid ""
 "\n"
 "          Are you sure you want to remove the sensor?\n"
 "        "
 msgstr ""
 
-#: osk/templates/osk/osk_deletesensor.html:18
+#: geosk/osk/templates/osk/osk_deletesensor.html:18
 msgid ""
 "This action CANNOT be undone. This will permanently delete\n"
 "      the sensor and remove all observations associated."
 msgstr ""
 
-#: osk/templates/osk/osk_deletesensor.html:23
+#: geosk/osk/templates/osk/osk_deletesensor.html:23
 msgid "Yes, I am sure"
 msgstr ""
 
-#: osk/templates/osk/osk_deletesensor.html:24
+#: geosk/osk/templates/osk/osk_deletesensor.html:24
 msgid "No, don't remove it"
 msgstr ""
 
-#: osk/templates/osk/osk_list.html:22 templates/site_base.html:14
+#: geosk/osk/templates/osk/osk_list.html:22 geosk/templates/site_base.html:80
 msgid "Register a new  Sensor"
 msgstr ""
 
-#: osk/templates/osk/osk_list.html:24
+#: geosk/osk/templates/osk/osk_list.html:24
 msgid "Capabilities"
 msgstr ""
 
-#: osk/templates/osk/osk_list.html:41
+#: geosk/osk/templates/osk/osk_list.html:41
 msgid "Identification"
 msgstr ""
 
-#: osk/templates/osk/osk_list.html:53
+#: geosk/osk/templates/osk/osk_list.html:53
 msgid "Name"
 msgstr ""
 
-#: osk/templates/osk/osk_list.html:55
+#: geosk/osk/templates/osk/osk_list.html:55
+#: geosk/templates/people/profile_detail.html:83
 msgid "Organization"
 msgstr ""
 
-#: osk/templates/osk/osk_list.html:57
+#: geosk/osk/templates/osk/osk_list.html:57
+#: geosk/templates/people/profile_detail.html:79
 msgid "Position"
 msgstr ""
 
-#: osk/templates/osk/osk_list.html:59
+#: geosk/osk/templates/osk/osk_list.html:59
 msgid "Address"
 msgstr ""
 
-#: osk/templates/osk/osk_list.html:61
+#: geosk/osk/templates/osk/osk_list.html:61
 msgid "Postcode"
 msgstr ""
 
-#: osk/templates/osk/osk_list.html:63
+#: geosk/osk/templates/osk/osk_list.html:63
 msgid "City"
 msgstr ""
 
-#: osk/templates/osk/osk_list.html:65
+#: geosk/osk/templates/osk/osk_list.html:65
 msgid "Region"
 msgstr ""
 
-#: osk/templates/osk/osk_list.html:67
+#: geosk/osk/templates/osk/osk_list.html:67
 msgid "Country"
 msgstr ""
 
-#: osk/templates/osk/osk_list.html:69
+#: geosk/osk/templates/osk/osk_list.html:69
+#: geosk/templates/people/profile_detail.html:70
 msgid "Email"
 msgstr ""
 
-#: osk/templates/osk/osk_list.html:71
+#: geosk/osk/templates/osk/osk_list.html:71
 msgid "Phone"
 msgstr ""
 
-#: osk/templates/osk/osk_list.html:73
+#: geosk/osk/templates/osk/osk_list.html:73
+#: geosk/templates/people/profile_detail.html:100
 msgid "Fax"
 msgstr ""
 
-#: osk/templates/osk/osk_list.html:75
+#: geosk/osk/templates/osk/osk_list.html:75
 msgid "Site"
 msgstr ""
 
-#: osk/templates/osk/osk_list.html:81
+#: geosk/osk/templates/osk/osk_list.html:81
 msgid "Sensors / Procedures"
 msgstr ""
 
-#: osk/templates/osk/osk_list.html:85
+#: geosk/osk/templates/osk/osk_list.html:85
 msgid "Number of sensors:"
 msgstr ""
 
-#: osk/templates/osk/osk_list.html:96 templates/site_index.html:45
+#: geosk/osk/templates/osk/osk_list.html:96 geosk/templates/site_index.html:59
 msgid "Sensor"
 msgstr ""
 
-#: osk/templates/osk/osk_list.html:104
+#: geosk/osk/templates/osk/osk_list.html:104
 msgid "Sensor details"
 msgstr ""
 
-#: osk/templates/osk/osk_list.html:108
+#: geosk/osk/templates/osk/osk_list.html:108
 msgid "Upload observations"
 msgstr ""
 
-#: osk/templates/osk/osk_registration.html:7
+#: geosk/osk/templates/osk/osk_registration.html:7
 msgid "Sensor Registration"
 msgstr ""
 
-#: osk/templates/osk/osk_registration.html:25
+#: geosk/osk/templates/osk/osk_registration.html:25
 msgid "SOS compliance"
 msgstr ""
 
-#: osk/templates/osk/osk_upload.html:7
+#: geosk/osk/templates/osk/osk_upload.html:7
 msgid "Explore Documents"
 msgstr "Esplora documenti"
 
-#: skregistration/models.py:20 skregistration/models.py:21
+#: geosk/skregistration/models.py:20 geosk/skregistration/models.py:21
 msgid "GET-IT registration"
 msgstr "Registrazione GET-IT"
 
-#: skregistration/templates/skregistration/registration.html:10
+#: geosk/skregistration/templates/skregistration/registration.html:10
 msgid "Registration status"
 msgstr "Statto della registrazione"
 
-#: skregistration/templates/skregistration/registration.html:32
+#: geosk/skregistration/templates/skregistration/registration.html:32
 msgid "Domain"
 msgstr ""
 
-#: skregistration/templates/skregistration/registration.html:35
+#: geosk/skregistration/templates/skregistration/registration.html:35
 msgid "Site URL"
 msgstr ""
 
-#: skregistration/templates/skregistration/registration.html:38
+#: geosk/skregistration/templates/skregistration/registration.html:38
 msgid "Web Title/Name"
 msgstr ""
 
-#: skregistration/templates/skregistration/registration.html:42
+#: geosk/skregistration/templates/skregistration/registration.html:42
 msgid "Modify"
 msgstr ""
 
-#: skregistration/templates/skregistration/registration.html:46
+#: geosk/skregistration/templates/skregistration/registration.html:46
 msgid "Check validation"
 msgstr ""
 
-#: skregistration/templates/skregistration/registration.html:48
+#: geosk/skregistration/templates/skregistration/registration.html:48
 msgid "Please check the information is correct prior to registering the GET-IT"
 msgstr ""
 
-#: skregistration/templates/skregistration/registration.html:53
+#: geosk/skregistration/templates/skregistration/registration.html:53
 msgid "I have read the legal notes and i agree to them."
 msgstr ""
 
-#: skregistration/templates/skregistration/registration.html:54
+#: geosk/skregistration/templates/skregistration/registration.html:54
 msgid "Read it."
 msgstr ""
 
-#: skregistration/templates/skregistration/registration.html:58
-#: templates/base_old.html:96 templates/site_base_old.html:81
+#: geosk/skregistration/templates/skregistration/registration.html:58
+#: geosk/templates/base.html:125 geosk/templates/base_old.html:96
+#: geosk/templates/site_base.html:108 geosk/templates/site_base_old.html:81
 msgid "Register"
 msgstr ""
 
-#: skregistration/templates/skregistration/registration.html:61
+#: geosk/skregistration/templates/skregistration/registration.html:61
 msgid ""
 "Please add more information about your GET-IT implementation. Fill the "
 "Services Metadata form."
 msgstr ""
 
-#: skregistration/templates/skregistration/registration.html:62
+#: geosk/skregistration/templates/skregistration/registration.html:62
 msgid "Insert metadata"
 msgstr ""
 
-#: templates/about.html:4 templates/about.html.py:8
+#: geosk/templates/about.html:4 geosk/templates/about.html.py:8
 msgid "About RITMARE GET-IT Starterkit"
 msgstr ""
 
-#: templates/about.html:10
+#: geosk/templates/about.html:10
 msgid ""
 "\n"
 "      The updated documentation is available at the RITMARE SP7 Wiki:\n"
@@ -1033,21 +1150,21 @@ msgid ""
 "      "
 msgstr ""
 
-#: templates/about_services.html:5
+#: geosk/templates/about_services.html:5
 msgid "Descrizione servizi"
 msgstr ""
 
-#: templates/about_services.html:11
+#: geosk/templates/about_services.html:11
 msgid "GET-IT Web Services"
 msgstr ""
 
-#: templates/about_services.html:13
+#: geosk/templates/about_services.html:13
 msgid ""
 "GET-IT provides <a href=\"http://www.opengeospatial.org/\">OGC</a> compliant "
 "web services to discover, view and download geospatial datasets.\n"
 msgstr ""
 
-#: templates/about_services.html:33
+#: geosk/templates/about_services.html:33
 msgid ""
 "\n"
 "      <p>\n"
@@ -1069,7 +1186,7 @@ msgid ""
 "    "
 msgstr ""
 
-#: templates/about_services.html:57
+#: geosk/templates/about_services.html:57
 msgid ""
 "\n"
 "      <p>\n"
@@ -1089,7 +1206,7 @@ msgid ""
 "    "
 msgstr ""
 
-#: templates/about_services.html:78
+#: geosk/templates/about_services.html:78
 msgid ""
 "\n"
 "      <p>\n"
@@ -1111,7 +1228,7 @@ msgid ""
 "    "
 msgstr ""
 
-#: templates/about_services.html:98
+#: geosk/templates/about_services.html:98
 msgid ""
 "\n"
 "      <p>\n"
@@ -1127,7 +1244,7 @@ msgid ""
 "    "
 msgstr ""
 
-#: templates/about_services.html:114
+#: geosk/templates/about_services.html:114
 msgid ""
 "\n"
 "      <p>\n"
@@ -1140,7 +1257,7 @@ msgid ""
 "    "
 msgstr ""
 
-#: templates/about_services.html:130
+#: geosk/templates/about_services.html:130
 msgid ""
 "\n"
 "      <p>\n"
@@ -1166,15 +1283,17 @@ msgid ""
 "    "
 msgstr ""
 
-#: templates/about_upload_layers.html:5 templates/site_index_old.html:78
+#: geosk/templates/about_upload_layers.html:5
+#: geosk/templates/layers/layer_list.html:14
+#: geosk/templates/site_index_old.html:78
 msgid "Upload Layers"
 msgstr ""
 
-#: templates/about_upload_layers.html:11
+#: geosk/templates/about_upload_layers.html:11
 msgid "Uploading layers in GET-IT"
 msgstr ""
 
-#: templates/about_upload_layers.html:15
+#: geosk/templates/about_upload_layers.html:15
 msgid ""
 "GET-IT provides a user friendly tool to upload easilly spatial data such as "
 "Rasters (GeoTIFF) and vector data (shapefiles).\n"
@@ -1182,162 +1301,304 @@ msgid ""
 "geoserver.org/2.4.x/en/user/\">Geoserver manual</a>\n"
 msgstr ""
 
-#: templates/base_old.html:51 templates/site_base_old.html:33
-msgid "Profile"
+#: geosk/templates/account/login.html:7 geosk/templates/account/login.html:53
+msgid "Log in"
 msgstr ""
 
-#: templates/base_old.html:52 templates/site_base_old.html:34
-msgid "Inbox"
+#: geosk/templates/account/login.html:15
+msgid "Reserved Area"
 msgstr ""
 
-#: templates/base_old.html:54 templates/site_base_old.html:36
-msgid "Admin"
+#: geosk/templates/account/login.html:48
+msgid "Forgot your username?"
 msgstr ""
 
-#: templates/base_old.html:57 templates/site_base_old.html:39
-msgid "Announcements"
+#: geosk/templates/account/login.html:49
+msgid "Forgot your password?"
 msgstr ""
 
-#: templates/base_old.html:60 templates/site_base_old.html:42
-msgid "GeoServer"
-msgstr ""
-
-#: templates/base_old.html:62 templates/site_base_old.html:44
-msgid "Recent Activity"
-msgstr ""
-
-#: templates/base_old.html:64 templates/site_base_old.html:46
+#: geosk/templates/account/logout.html:6 geosk/templates/account/logout.html:10
+#: geosk/templates/account/logout.html:19 geosk/templates/admin/base.html:22
+#: geosk/templates/base_old.html:64 geosk/templates/site_base_old.html:46
 msgid "Log out"
 msgstr ""
 
-#: templates/base_old.html:69 templates/site_base_old.html:51
-msgid "Notifications"
+#: geosk/templates/account/logout.html:17
+msgid "Are you sure you want to log out?"
 msgstr ""
 
-#: templates/base_old.html:70 templates/site_base_old.html:52
-msgid "Messages"
+#: geosk/templates/admin/base.html:19
+#: geosk/templates/people/profile_detail.html:140
+msgid "Change password"
 msgstr ""
 
-#: templates/base_old.html:72 templates/site_base_old.html:54
+#: geosk/templates/admin/base.html:29
+msgid "View site"
+msgstr ""
+
+#: geosk/templates/admin/base.html:34
+#, fuzzy
+#| msgid "Document"
+#| msgid_plural "Documents"
+msgid "Documentation"
+msgstr "Documento"
+
+#: geosk/templates/base.html:62 geosk/templates/site_base.html:25
+msgid "Data"
+msgstr ""
+
+#: geosk/templates/base.html:67 geosk/templates/base.html.py:208
+#: geosk/templates/people/profile_detail.html:160
+#: geosk/templates/site_base.html:30
+#, fuzzy
+#| msgid "GeoNode's Web Services"
+msgid "Remote Services"
+msgstr "StarterKit's Web Services"
+
+#: geosk/templates/base.html:71 geosk/templates/base.html.py:211
+#: geosk/templates/site_base.html:34
+#, fuzzy
+#| msgid "Create a map"
+msgid "Create Layer"
+msgstr "Create a view"
+
+#: geosk/templates/base.html:74 geosk/templates/base.html.py:214
+#: geosk/templates/site_base.html:37
+msgid "Add Remote Service"
+msgstr ""
+
+#: geosk/templates/base.html:82 geosk/templates/base.html.py:221
+#: geosk/templates/maps/map_list.html:16 geosk/templates/site_base.html:45
+#: geosk/templates/site_index_old.html:52
+msgid "Explore Maps"
+msgstr "Explore Views"
+
+#: geosk/templates/base.html:83 geosk/templates/base.html.py:223
+#: geosk/templates/site_base.html:46
+#, fuzzy
+#| msgid "Create a Map"
+msgid "Create Map"
+msgstr "Create a View"
+
+#: geosk/templates/base.html:90 geosk/templates/site_base.html:54
+msgid "Users"
+msgstr ""
+
+#: geosk/templates/base.html:93 geosk/templates/base.html.py:231
+#: geosk/templates/site_base.html:57
+msgid "Groups"
+msgstr ""
+
+#: geosk/templates/base.html:94 geosk/templates/site_base.html:58
+msgid "Group Categories"
+msgstr ""
+
+#: geosk/templates/base.html:96 geosk/templates/base.html.py:233
+#: geosk/templates/base_old.html:57
+#: geosk/templates/people/profile_detail.html:155
+#: geosk/templates/site_base.html:60 geosk/templates/site_base_old.html:39
+msgid "Announcements"
+msgstr ""
+
+#: geosk/templates/base.html:100 geosk/templates/base.html.py:236
+#: geosk/templates/site_base.html:64
+#, fuzzy
+#| msgid "Add sensors"
+msgid "Add User"
+msgstr "Aggiungi sensore"
+
+#: geosk/templates/base.html:101 geosk/templates/base.html.py:237
+#: geosk/templates/people/profile_detail.html:161
+#: geosk/templates/site_base.html:65
+msgid "Invite User"
+msgstr ""
+
+#: geosk/templates/base.html:102 geosk/templates/base.html.py:238
+#: geosk/templates/site_base.html:66
+#, fuzzy
+#| msgid "Create a map"
+msgid "Create Group"
+msgstr "Create a view"
+
+#: geosk/templates/base.html:141 geosk/templates/base_old.html:51
+#: geosk/templates/site_base.html:123 geosk/templates/site_base_old.html:33
+msgid "Profile"
+msgstr ""
+
+#: geosk/templates/base.html:142 geosk/templates/base_old.html:62
+#: geosk/templates/site_base.html:124 geosk/templates/site_base_old.html:44
+msgid "Recent Activity"
+msgstr ""
+
+#: geosk/templates/base.html:143 geosk/templates/base_old.html:52
+#: geosk/templates/site_base.html:125 geosk/templates/site_base_old.html:34
+msgid "Inbox"
+msgstr ""
+
+#: geosk/templates/base.html:151 geosk/templates/site_base.html:133
+msgid "Monitoring"
+msgstr ""
+
+#: geosk/templates/base.html:154 geosk/templates/base_old.html:72
+#: geosk/templates/site_base.html:136 geosk/templates/site_base_old.html:54
 msgid "Help"
 msgstr ""
 
-#: templates/base_old.html:76 templates/base_old.html.py:89
-#: templates/site_base_old.html:61 templates/site_base_old.html.py:74
+#: geosk/templates/base.html:160 geosk/templates/base.html.py:275
+#: geosk/templates/base.html:293 geosk/templates/base_old.html:76
+#: geosk/templates/base_old.html.py:89 geosk/templates/site_base.html:142
+#: geosk/templates/site_base_old.html:61 geosk/templates/site_base_old.html:74
 msgid "Sign in"
 msgstr ""
 
-#: templates/base_old.html:81 templates/site_base_old.html:66
-msgid "Username"
-msgstr ""
-
-#: templates/base_old.html:83 templates/site_base_old.html:68
-msgid "Password"
-msgstr ""
-
-#: templates/base_old.html:87 templates/site_base_old.html:72
-msgid "Remember Me"
-msgstr ""
-
-#: templates/base_old.html:95 templates/site_base_old.html:80
-msgid "or"
-msgstr ""
-
-#: templates/base_old.html:191
+#: geosk/templates/base.html:244 geosk/templates/base_old.html:191
 msgid "Powered by"
 msgstr ""
 
-#: templates/base_old.html:191 templates/site_base.html:39
-#: templates/site_base_old.html:174
+#: geosk/templates/base.html:244 geosk/templates/base_old.html:191
+#: geosk/templates/site_base_old.html:174
 msgid "GeoNode"
 msgstr "GeoNode"
 
-#: templates/base_old.html:191 templates/site_base.html:39
+#: geosk/templates/base.html:244 geosk/templates/base_old.html:191
 msgid "version"
 msgstr ""
 
-#: templates/base_old.html:192
+#: geosk/templates/base.html:245 geosk/templates/base_old.html:192
 msgid "Developers"
 msgstr ""
 
-#: templates/documents_old/_document_list_item.html:18
+#: geosk/templates/base.html:281 geosk/templates/base.html.py:282
+#: geosk/templates/base_old.html:81 geosk/templates/site_base_old.html:66
+msgid "Username"
+msgstr ""
+
+#: geosk/templates/base.html:285 geosk/templates/base.html.py:286
+#: geosk/templates/base_old.html:83 geosk/templates/site_base_old.html:68
+msgid "Password"
+msgstr ""
+
+#: geosk/templates/base.html:289 geosk/templates/base_old.html:87
+#: geosk/templates/site_base_old.html:72
+msgid "Remember Me"
+msgstr ""
+
+#: geosk/templates/base.html:330
+msgid "Type your search here ..."
+msgstr ""
+
+#: geosk/templates/base/_resourcebase_snippet.html:30
+msgid "Show detail"
+msgstr ""
+
+#: geosk/templates/base_old.html:54
+#: geosk/templates/people/profile_detail.html:165
+#: geosk/templates/site_base_old.html:36
+msgid "Admin"
+msgstr ""
+
+#: geosk/templates/base_old.html:60
+#: geosk/templates/people/profile_detail.html:162
+#: geosk/templates/site_base_old.html:42
+msgid "GeoServer"
+msgstr ""
+
+#: geosk/templates/base_old.html:69
+#: geosk/templates/people/profile_detail.html:152
+#: geosk/templates/site_base_old.html:51
+msgid "Notifications"
+msgstr ""
+
+#: geosk/templates/base_old.html:70 geosk/templates/site_base_old.html:52
+msgid "Messages"
+msgstr ""
+
+#: geosk/templates/base_old.html:95 geosk/templates/site_base_old.html:80
+msgid "or"
+msgstr ""
+
+#: geosk/templates/documents_old/_document_list_item.html:18
 msgid "Doc from"
 msgstr ""
 
-#: templates/documents_old/document_detail.html:46
+#: geosk/templates/documents_old/document_detail.html:46
 msgid "Edit Document"
 msgstr ""
 
-#: templates/documents_old/document_detail.html:52
+#: geosk/templates/documents_old/document_detail.html:52
 msgid "Replace this Document"
 msgstr ""
 
-#: templates/documents_old/document_detail.html:53
+#: geosk/templates/documents_old/document_detail.html:53
 msgid "Remove this Document"
 msgstr ""
 
-#: templates/documents_old/document_detail.html:72
-#: templates/site_base_old.html:175
+#: geosk/templates/documents_old/document_detail.html:72
+#: geosk/templates/site_base_old.html:175
 msgid "Info"
 msgstr ""
 
-#: templates/documents_old/document_detail.html:73
+#: geosk/templates/documents_old/document_detail.html:73
 msgid "Comments"
 msgstr ""
 
-#: templates/documents_old/document_detail.html:74
+#: geosk/templates/documents_old/document_detail.html:74
 msgid "Ratings"
 msgstr ""
 
-#: templates/documents_old/document_detail.html:75
+#: geosk/templates/documents_old/document_detail.html:75
 msgid "Share"
 msgstr ""
 
-#: templates/documents_old/document_detail.html:76
+#: geosk/templates/documents_old/document_detail.html:76
 msgid "Flag"
 msgstr ""
 
-#: templates/documents_old/document_detail.html:99
+#: geosk/templates/documents_old/document_detail.html:99
 msgid "Rate this document"
 msgstr ""
 
-#: templates/documents_old/document_detail.html:113
+#: geosk/templates/documents_old/document_detail.html:113
 msgid "Resource using this document"
 msgstr ""
 
-#: templates/documents_old/document_detail.html:115
+#: geosk/templates/documents_old/document_detail.html:115
 msgid "List of resources using this document:"
 msgstr ""
 
-#: templates/documents_old/document_detail.html:119
+#: geosk/templates/documents_old/document_detail.html:119
 msgid "This document is related to a "
 msgstr ""
 
-#: templates/documents_old/document_detail.html:122
+#: geosk/templates/documents_old/document_detail.html:122
 msgid "This document is not related to any maps or layers"
 msgstr "This document is not related to any views or layers"
 
-#: templates/documents_old/document_detail.html:130
+#: geosk/templates/documents_old/document_detail.html:130
 msgid "Click the button below to change the permissions of this document."
 msgstr ""
 
-#: templates/documents_old/document_detail.html:131
+#: geosk/templates/documents_old/document_detail.html:131
 msgid "Change Document Permissions"
 msgstr ""
 
-#: templates/documents_old/document_detail.html:136
+#: geosk/templates/documents_old/document_detail.html:136
 msgid "Document Owner"
 msgstr ""
 
-#: templates/help.html:4
+#: geosk/templates/gdpr.html:4
+msgid "GDPR"
+msgstr ""
+
+#: geosk/templates/help.html:4
 msgid "User Guide"
 msgstr ""
 
-#: templates/help.html:8
+#: geosk/templates/help.html:8
 msgid "GeoNode Help"
 msgstr "StarterKit Help"
 
-#: templates/help.html:9
+#: geosk/templates/help.html:9
 msgid ""
 "This page provides helpful information about how to use the GeoNode. You can "
 "use the sidebar links to navigate to what you want to know."
@@ -1345,7 +1606,7 @@ msgstr ""
 "This page provides helpful information about how to use the StarterKit. You "
 "can use the sidebar links to navigate to what you want to know."
 
-#: templates/help.html:12
+#: geosk/templates/help.html:12
 msgid ""
 "\n"
 "  <p>The GeoNode provides access to data sets and a map editing application "
@@ -1535,225 +1796,449 @@ msgstr ""
 "href=\"/maps\">Views</a> tab.</p>\n"
 " "
 
-#: templates/help.html:72
+#: geosk/templates/help.html:72
 msgid "Sections"
 msgstr ""
 
-#: templates/help.html:73
+#: geosk/templates/help.html:73
 msgid "Creating Layers"
 msgstr ""
 
-#: templates/help.html:74
+#: geosk/templates/help.html:74
 msgid "Browsing Layers"
 msgstr ""
 
-#: templates/help.html:75
+#: geosk/templates/help.html:75
 msgid "Developer Access"
 msgstr ""
 
-#: templates/help.html:76
+#: geosk/templates/help.html:76
 msgid "Browsing Maps"
 msgstr "Browsing Views"
 
-#: templates/help.html:77
+#: geosk/templates/help.html:77
 msgid "Using Services"
 msgstr ""
 
-#: templates/help.html:78
+#: geosk/templates/help.html:78
 msgid "Creating a Map"
 msgstr "Creating a View"
 
-#: templates/help.html:79
+#: geosk/templates/help.html:79
 msgid "Exporting a Map"
 msgstr "Exporting a View"
 
-#: templates/help.html:80
+#: geosk/templates/help.html:80
 msgid "Remixing a Map"
 msgstr "Remixing a View"
 
-#: templates/maps_old/_map_list_item.html:17
+#: geosk/templates/maps/map_detail.html:76
+msgid "Map layers WMS GetCapabilities document"
+msgstr ""
+
+#: geosk/templates/maps/map_detail.html:83
+msgid "View Map"
+msgstr "Show View"
+
+#: geosk/templates/maps/map_detail.html:85
+#: geosk/templates/maps/map_detail.html:91
+#, fuzzy
+#| msgid "Edit Map"
+msgid "Edit Map"
+msgstr "Edit View"
+
+#: geosk/templates/maps/map_detail.html:113 geosk/templates/site_index.html:75
+#, fuzzy
+msgid "Map"
+msgstr "Views"
+
+#: geosk/templates/maps/map_detail.html:131
+#: geosk/templates/maps/map_detail.html:146
+msgid "Download Map"
+msgstr "Download View"
+
+#: geosk/templates/maps/map_detail.html:173
+#, fuzzy
+#| msgid "Map Layers"
+msgid "Map Layers"
+msgstr "View Layers"
+
+#: geosk/templates/maps/map_detail.html:174
+msgid "This map uses the following layers:"
+msgstr "This view uses the following layers:"
+
+#: geosk/templates/maps/map_detail.html:190
+msgid "Documents related to this map"
+msgstr "Documents related to this view"
+
+#: geosk/templates/maps/map_detail.html:191
+msgid "List of documents related to this map:"
+msgstr "List of documents related to this view:"
+
+#: geosk/templates/maps/map_detail.html:203
+msgid "Specify which users can view or modify this map"
+msgstr "Specify which users can view or modify this view"
+
+#: geosk/templates/maps/map_detail.html:204
+msgid "Change Permissions of this Map"
+msgstr "Change Permissions of this View"
+
+#: geosk/templates/maps/map_detail.html:210
+msgid "Copy this map"
+msgstr "Copy this view"
+
+#: geosk/templates/maps/map_detail.html:211
+msgid "Duplicate this map and modify it for your own purposes"
+msgstr "Duplicate this view and modify it for your own purposes"
+
+#: geosk/templates/maps/map_detail.html:212
+#: geosk/templates/maps/map_list.html:12
+msgid "Create a New Map"
+msgstr "Create a New View"
+
+#: geosk/templates/maps/map_detail.html:216
+#, fuzzy
+#| msgid "Remove this Map"
+msgid "Embed this map"
+msgstr "Remove this View"
+
+#: geosk/templates/maps/map_detail.html:217
+#, fuzzy
+#| msgid "Duplicate this map and modify it for your own purposes"
+msgid "Embed this map to your own sites"
+msgstr "Duplicate this view and modify it for your own purposes"
+
+#: geosk/templates/maps/map_detail.html:238
+msgid "Map WMS"
+msgstr "View WMS"
+
+#: geosk/templates/maps/map_detail.html:240
+msgid "WMS layer group for local map layers"
+msgstr "WMS layer group for local view layers"
+
+#: geosk/templates/maps/map_detail.html:241
+msgid "on"
+msgstr ""
+
+#: geosk/templates/maps/map_detail.html:241
+msgid "local OWS"
+msgstr ""
+
+#: geosk/templates/maps/map_detail.html:244
+msgid "Publish local map layers as WMS layer group"
+msgstr "Publish local view layers as WMS layer group"
+
+#: geosk/templates/maps/map_detail.html:245
+msgid "Publish Map WMS"
+msgstr "Publish View WMS"
+
+#: geosk/templates/maps/map_detail.html:276
+msgid "Rate this Map"
+msgstr "Rate this View"
+
+#: geosk/templates/maps/map_detail.html:300
+msgid "Embed Iframe"
+msgstr ""
+
+#: geosk/templates/maps/map_detail.html:323
+msgid "Embed Widget"
+msgstr ""
+
+#: geosk/templates/maps/map_detail.html:330
+msgid "Copy to Clipboard"
+msgstr ""
+
+#: geosk/templates/maps_old/_map_list_item.html:17
 msgid "Map from"
 msgstr "View from"
 
-#: templates/maps_old/_map_list_item.html:27
+#: geosk/templates/maps_old/_map_list_item.html:27
 msgid "View"
 msgstr ""
 
-#: templates/search_old/_general_filters.html:7
+#: geosk/templates/people/profile_detail.html:7
+msgid "Profile of "
+msgstr ""
+
+#: geosk/templates/people/profile_detail.html:74
+#: geosk/templates/people/profile_detail.html:80
+#: geosk/templates/people/profile_detail.html:84
+#: geosk/templates/people/profile_detail.html:89
+#: geosk/templates/people/profile_detail.html:101
+#: geosk/templates/people/profile_detail.html:105
+msgid "Not provided."
+msgstr ""
+
+#: geosk/templates/people/profile_detail.html:88
+msgid "Location"
+msgstr ""
+
+#: geosk/templates/people/profile_detail.html:92
+msgid "Voice"
+msgstr ""
+
+#: geosk/templates/people/profile_detail.html:116
+msgid "Not provided"
+msgstr ""
+
+#: geosk/templates/people/profile_detail.html:129
+msgid "User layers WMS GetCapabilities document"
+msgstr ""
+
+#: geosk/templates/people/profile_detail.html:135
+msgid "Message User"
+msgstr ""
+
+#: geosk/templates/people/profile_detail.html:139
+#: geosk/templates/people/profile_detail.html:174
+msgid "Edit profile"
+msgstr ""
+
+#: geosk/templates/people/profile_detail.html:143
+#, fuzzy
+#| msgid "Explore Maps"
+msgid "Upload new layers"
+msgstr "Explore Views"
+
+#: geosk/templates/people/profile_detail.html:145
+#, fuzzy
+#| msgid "Create a new map"
+msgid "Create a new layer"
+msgstr "Create a new view"
+
+#: geosk/templates/people/profile_detail.html:147
+msgid "Create a new map"
+msgstr "Create a new view"
+
+#: geosk/templates/people/profile_detail.html:148
+msgid "My Activities"
+msgstr ""
+
+#: geosk/templates/people/profile_detail.html:178
+msgid "User Activities"
+msgstr ""
+
+#: geosk/templates/people/profile_detail.html:191
+msgid "Resources"
+msgstr ""
+
+#: geosk/templates/people/profile_list.html:4
+#: geosk/templates/people/profile_list.html:13
+#, fuzzy
+#| msgid "Explore Maps"
+msgid "Explore People"
+msgstr "Explore Views"
+
+#: geosk/templates/search/_pagination_resource.html:13
+#: geosk/templates/search/_pagination_users.html:13
+msgid "page"
+msgstr ""
+
+#: geosk/templates/search/_pagination_resource.html:13
+#: geosk/templates/search/_pagination_users.html:13
+msgid "of"
+msgstr ""
+
+#: geosk/templates/search/_search_content.html:11
+#, fuzzy
+#| msgid "Edit Map Permissions"
+msgid "Set permissions"
+msgstr "Edit View Permissions"
+
+#: geosk/templates/search/_search_content.html:23
+msgid "Filters"
+msgstr ""
+
+#: geosk/templates/search/_search_content.html:24
+msgid "Clear"
+msgstr ""
+
+#: geosk/templates/search/_search_user_content.html:11
+msgid "search"
+msgstr ""
+
+#: geosk/templates/search/_search_user_content.html:31
+msgid "Categories"
+msgstr ""
+
+#: geosk/templates/search/_sort_filters.html:36
+#: geosk/templates/search/_sort_filters.html:42
+#: geosk/templates/search/_sort_filters.html:47
+msgid "Most recent"
+msgstr ""
+
+#: geosk/templates/search/_sort_filters.html:37
+#: geosk/templates/search/_sort_filters.html:43
+#: geosk/templates/search/_sort_filters.html:48
+msgid "Less recent"
+msgstr ""
+
+#: geosk/templates/search/_sort_filters.html:38
+#: geosk/templates/search/_sort_filters.html:44
+#: geosk/templates/search/_sort_filters.html:49
+msgid "A - Z"
+msgstr ""
+
+#: geosk/templates/search/_sort_filters.html:39
+#: geosk/templates/search/_sort_filters.html:45
+#: geosk/templates/search/_sort_filters.html:50
+msgid "Z - A"
+msgstr ""
+
+#: geosk/templates/search/_sort_filters.html:40
+msgid "Most popular"
+msgstr ""
+
+#: geosk/templates/search/_text_filter.html:5
+msgid "Text"
+msgstr ""
+
+#: geosk/templates/search/_text_filter.html:10
+msgid "Search by text"
+msgstr ""
+
+#: geosk/templates/search_old/_general_filters.html:7
 msgid "Date begins after:"
 msgstr ""
 
-#: templates/search_old/_general_filters.html:11
+#: geosk/templates/search_old/_general_filters.html:11
 msgid "Date ends before:"
 msgstr ""
 
-#: templates/search_old/advanced_search.html:14
+#: geosk/templates/search_old/advanced_search.html:14
 msgid "Search for: "
 msgstr ""
 
-#: templates/search_old/advanced_search.html:20
+#: geosk/templates/search_old/advanced_search.html:20
 msgid "All of the words"
 msgstr ""
 
-#: templates/search_old/advanced_search.html:26
-#: templates/search_old/advanced_search.html:124
+#: geosk/templates/search_old/advanced_search.html:26
+#: geosk/templates/search_old/advanced_search.html:124
 msgid "Search "
 msgstr ""
 
-#: templates/search_old/advanced_search.html:29
+#: geosk/templates/search_old/advanced_search.html:29
 msgid "Exclude words from your search"
 msgstr ""
 
-#: templates/search_old/advanced_search.html:35
+#: geosk/templates/search_old/advanced_search.html:35
 msgid "All resources"
 msgstr ""
 
-#: templates/search_old/advanced_search.html:38
+#: geosk/templates/search_old/advanced_search.html:38
 msgid "Maps only"
 msgstr "Views only"
 
-#: templates/search_old/advanced_search.html:41
+#: geosk/templates/search_old/advanced_search.html:41
 msgid "Layers only"
 msgstr ""
 
-#: templates/search_old/advanced_search.html:44
+#: geosk/templates/search_old/advanced_search.html:44
 msgid "Users only"
 msgstr ""
 
-#: templates/search_old/advanced_search.html:51
+#: geosk/templates/search_old/advanced_search.html:51
 msgid "Search by Extent: "
 msgstr ""
 
-#: templates/search_old/advanced_search.html:65
+#: geosk/templates/search_old/advanced_search.html:65
 msgid "Type: "
 msgstr ""
 
-#: templates/search_old/advanced_search.html:70
+#: geosk/templates/search_old/advanced_search.html:70
 msgid "From this site/portal"
 msgstr ""
 
-#: templates/search_old/advanced_search.html:76
+#: geosk/templates/search_old/advanced_search.html:76
 msgid "From this group"
 msgstr ""
 
-#: templates/search_old/advanced_search.html:82
+#: geosk/templates/search_old/advanced_search.html:82
 msgid "From this organization"
 msgstr ""
 
-#: templates/search_old/advanced_search.html:88
+#: geosk/templates/search_old/advanced_search.html:88
 msgid "From this geographic region"
 msgstr ""
 
-#: templates/search_old/advanced_search.html:98
+#: geosk/templates/search_old/advanced_search.html:98
 msgid "Metadata: "
 msgstr ""
 
-#: templates/search_old/advanced_search.html:103
+#: geosk/templates/search_old/advanced_search.html:103
 msgid "Since this date"
 msgstr ""
 
-#: templates/search_old/advanced_search.html:112
+#: geosk/templates/search_old/advanced_search.html:112
 msgid "Until this date"
 msgstr ""
 
-#: templates/search_old/advanced_search.html:125
+#: geosk/templates/search_old/advanced_search.html:125
 msgid "Clear Options "
 msgstr ""
 
-#: templates/site_base.html:9 templates/site_base.html.py:19
-#: templates/site_base_old.html:109 templates/site_index.html:46
+#: geosk/templates/site_base.html:75 geosk/templates/site_base.html.py:85
+#: geosk/templates/site_base_old.html:109 geosk/templates/site_index.html:60
 msgid "Sensors"
 msgstr ""
 
-#: templates/site_base.html:12 templates/site_index_old.html:49
+#: geosk/templates/site_base.html:78 geosk/templates/site_index_old.html:49
 msgid "Explore Sensors"
 msgstr "Esplora sensori"
 
-#: templates/site_base.html:32
-msgid " is conceived and developed by <a target=\\"
-msgstr ""
-
-#: templates/site_base.html:33 templates/site_base_old.html:170
-msgid "Contacts"
-msgstr ""
-
-#: templates/site_base.html:34 templates/site_base_old.html:171
-msgid "Legal Notes"
-msgstr ""
-
-#: templates/site_base.html:35 templates/site_base_old.html:172
-#: templates/sk_credits.html:4 templates/sk_credits.html.py:8
-msgid "Credits"
-msgstr ""
-
-#: templates/site_base.html:39
-msgid " is based on"
-msgstr ""
-
-#: templates/site_base_old.html:167
+#: geosk/templates/site_base_old.html:167
 msgid "GET-IT is a project of the GET-IT Development Team"
 msgstr ""
 
-#: templates/site_base_old.html:169
+#: geosk/templates/site_base_old.html:169
 msgid ""
 " is developed by <a target='_blank' href='http://sp7.irea.cnr.it'>SP7</a>-<a "
 "target='_blank' href='http://www.ritmare.it/'>RITMARE</a>"
 msgstr ""
 
-#: templates/site_base_old.html:174
+#: geosk/templates/site_base_old.html:170
+msgid "Contacts"
+msgstr ""
+
+#: geosk/templates/site_base_old.html:171
+msgid "Legal Notes"
+msgstr ""
+
+#: geosk/templates/site_base_old.html:172 geosk/templates/sk_credits.html:4
+#: geosk/templates/sk_credits.html.py:8
+msgid "Credits"
+msgstr ""
+
+#: geosk/templates/site_base_old.html:174
 msgid "Based on"
 msgstr ""
 
-#: templates/site_index.html:10
-msgid "GET-IT"
-msgstr ""
-
-#: templates/site_index.html:11
-msgid "Share your maps, measurements, and sensors. Easily."
-msgstr ""
-
-#: templates/site_index.html:12
-msgid ""
-"<a href=\"http://www.get-it.it\" title=\"GET-IT website\" target=\"_blank"
-"\">GET-IT</a> allows you to easily share geospatial data on the web with "
-"simple actions.\n"
-"          The suite is the first open-source collaborative effort toward the "
-"integration of traditional geographic information with observational data."
-msgstr ""
-
-#: templates/site_index.html:14
-msgid "Need help?"
-msgstr ""
-
-#: templates/site_index.html:14
-msgid "Getting Started"
-msgstr ""
-
-#: templates/site_index.html:35 templates/site_index.html.py:45
-#: templates/site_index.html:56 templates/site_index.html.py:66
-#: templates/site_index.html:76
+#: geosk/templates/site_index.html:46 geosk/templates/site_index.html.py:59
+#: geosk/templates/site_index.html:75 geosk/templates/site_index.html.py:89
+#: geosk/templates/site_index.html:104
 msgid "No"
 msgstr ""
 
-#: templates/site_index.html:36
+#: geosk/templates/site_index.html:47
 msgid ""
 "Click to search for geospatial data published by other users, organizations "
 "and public sources. Download data in standard formats."
 msgstr ""
 
-#: templates/site_index.html:38
+#: geosk/templates/site_index.html:50
 #, fuzzy
 #| msgid "Map Layers"
 msgid "Add layers"
 msgstr "View Layers"
 
-#: templates/site_index.html:40
+#: geosk/templates/site_index.html:52
 #, fuzzy
 #| msgid "Explore Maps"
 msgid "Explore layers"
 msgstr "Explore Views"
 
-#: templates/site_index.html:47
+#: geosk/templates/site_index.html:61
 msgid ""
 "Registerd SOS (Sensor Observation Service). It aggregates observations from "
 "live in-situ sensors as well as historical data sets (time series data)"
@@ -1761,89 +2246,82 @@ msgstr ""
 "SOS registrati (Sensor Observation Service). Servizi che aggregano sensori "
 "in sito su set di dati temporali(time series data)"
 
-#: templates/site_index.html:49
+#: geosk/templates/site_index.html:63
 msgid "Add sensors"
 msgstr "Aggiungi sensore"
 
-#: templates/site_index.html:51
+#: geosk/templates/site_index.html:65
 msgid "Explore sensors"
 msgstr "Mostra sensori"
 
-#: templates/site_index.html:56
-#, fuzzy
-msgid "Map"
-msgid_plural "Maps"
-msgstr[0] "Views"
-msgstr[1] "Views"
-
-#: templates/site_index.html:57
+#: geosk/templates/site_index.html:76
 msgid ""
 "Data is available for browsing, aggregating and styling to generate maps "
 "which can be saved, downloaded, shared publicly or restricted to specify "
 "users only."
 msgstr ""
 
-#: templates/site_index.html:59
+#: geosk/templates/site_index.html:79
 #, fuzzy
 #| msgid "Create a map"
 msgid "Create maps"
 msgstr "Create a view"
 
-#: templates/site_index.html:61
+#: geosk/templates/site_index.html:81
 #, fuzzy
 #| msgid "Explore Maps"
 msgid "Explore maps"
 msgstr "Esplora viste"
 
-#: templates/site_index.html:66
+#: geosk/templates/site_index.html:89
 msgid "Document"
 msgid_plural "Documents"
 msgstr[0] "Documento"
 msgstr[1] "Documenti"
 
-#: templates/site_index.html:67
+#: geosk/templates/site_index.html:90
 msgid ""
 "As for the layers and maps GeoNode allows to publish tabular and text data, "
 "manage theirs metadata and associated documents."
 msgstr ""
 
-#: templates/site_index.html:69
+#: geosk/templates/site_index.html:92
 msgid "Add documents"
 msgstr ""
 
-#: templates/site_index.html:71
+#: geosk/templates/site_index.html:94
 #, fuzzy
 #| msgid "Explore Maps"
 msgid "Explore documents"
 msgstr "Explore Views"
 
-#: templates/site_index.html:76
+#: geosk/templates/site_index.html:104
 msgid "User"
 msgid_plural "Users"
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/site_index.html:77
+#: geosk/templates/site_index.html:105
 msgid ""
 "IHP-WINS allows registered users to easily upload geospatial data and "
 "various documents in several formats."
 msgstr ""
 
-#: templates/site_index.html:78
+#: geosk/templates/site_index.html:107
 msgid "See users"
 msgstr ""
 
-#: templates/site_index_old.html:23
+#: geosk/templates/site_index_old.html:23
 msgid "GET-IT - Demo"
 msgstr ""
 
-#: templates/site_index_old.html:33
+#: geosk/templates/site_index_old.html:33
 msgid ""
 "Upload your layers, your observations, create your maps and join the RITMARE "
 "interoperable Infrastructure."
 msgstr ""
 
-#: templates/site_index_old.html:37
+#: geosk/templates/site_index_old.html:37
 msgid ""
 "\n"
 "\t<a href=\"http://www.get-it.it/\" target=\"_blank\">GET-IT</a> is "
@@ -1853,33 +2331,29 @@ msgid ""
 "\t"
 msgstr ""
 
-#: templates/site_index_old.html:41
+#: geosk/templates/site_index_old.html:41
 msgid ""
 "For more info visit the project site: <a href=\"http://www.get-it.it/\" "
 "target=\"_blank\">www.get-it.it</a>"
 msgstr ""
 
-#: templates/site_index_old.html:42
+#: geosk/templates/site_index_old.html:42
 msgid "Need help"
 msgstr ""
 
-#: templates/site_index_old.html:42
+#: geosk/templates/site_index_old.html:42
 msgid "Getting Started?"
 msgstr ""
 
-#: templates/site_index_old.html:52
-msgid "Explore Maps"
-msgstr "Explore Views"
-
-#: templates/site_index_old.html:63
+#: geosk/templates/site_index_old.html:63
 msgid "Latest Layers"
 msgstr ""
 
-#: templates/site_index_old.html:73
+#: geosk/templates/site_index_old.html:73
 msgid "Contribute"
 msgstr ""
 
-#: templates/site_index_old.html:75
+#: geosk/templates/site_index_old.html:75
 msgid ""
 "\n"
 "              GeoNode enables you to upload, manage, and browse data layers. "
@@ -1891,7 +2365,7 @@ msgstr ""
 "Search for data that is valuable to you, or upload your own data. \n"
 "            "
 
-#: templates/site_index_old.html:80
+#: geosk/templates/site_index_old.html:80
 msgid ""
 "\n"
 "              GET-IT enables you to upload, manage, and view sensors and "
@@ -1900,11 +2374,11 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/site_index_old.html:83
+#: geosk/templates/site_index_old.html:83
 msgid "Create a Sensor"
 msgstr ""
 
-#: templates/site_index_old.html:85
+#: geosk/templates/site_index_old.html:85
 msgid ""
 "\n"
 "              GeoNode enables you to compose and share maps. Create a map "
@@ -1916,33 +2390,33 @@ msgstr ""
 "with our cartography tool, or explore views shared by others. \n"
 "            "
 
-#: templates/site_index_old.html:94
+#: geosk/templates/site_index_old.html:94
 msgid "Latest Maps"
 msgstr "Latest Views"
 
-#: templates/sk_credits.html:16
+#: geosk/templates/sk_credits.html:16
 msgid "Development Team"
 msgstr ""
 
-#: templates/sk_credits.html:17
+#: geosk/templates/sk_credits.html:17
 msgid "The development team is composed by:"
 msgstr ""
 
-#: templates/sk_credits.html:35
+#: geosk/templates/sk_credits.html:35
 msgid "GET-IT software"
 msgstr ""
 
-#: templates/sk_credits.html:36
+#: geosk/templates/sk_credits.html:36
 msgid ""
 "GET-IT is built using several open source projects, each with its own "
 "community:"
 msgstr ""
 
-#: templates/sk_credits.html:51
+#: geosk/templates/sk_credits.html:51
 msgid "Informations for developers"
 msgstr ""
 
-#: templates/sk_credits.html:52
+#: geosk/templates/sk_credits.html:52
 msgid ""
 "After installing GET-IT, getting started to use it following the <a href="
 "\"http://getit.readthedocs.io/en/latest/tutorials/users/index.html\" target="
@@ -1950,7 +2424,7 @@ msgid ""
 "en/latest/index.html\" target=\"_blank\">documentation</a>."
 msgstr ""
 
-#: templates/sk_license.html:8
+#: geosk/templates/sk_license.html:8
 msgid ""
 "\n"
 "      <h1>Geoinformation Enabling ToolkIT starterkit&reg License</h1>\n"
@@ -1958,7 +2432,7 @@ msgid ""
 "    "
 msgstr ""
 
-#: templates/sk_license.html:14
+#: geosk/templates/sk_license.html:14
 msgid ""
 "\n"
 "  <p>The Geoinformation Enabling ToolkIT starterkit® - GET-IT\n"
@@ -2064,62 +2538,11 @@ msgstr ""
 #~ msgid "A rating was given to a map"
 #~ msgstr "A rating was given to a view"
 
-#~ msgid "Download Map"
-#~ msgstr "Download View"
-
 #~ msgid "Download Web Map Context"
 #~ msgstr "Download Web View Context"
 
-#~ msgid "Edit Map Permissions"
-#~ msgstr "Edit View Permissions"
-
-#~ msgid "Remove this Map"
-#~ msgstr "Remove this View"
-
-#~ msgid "View Map"
-#~ msgstr "Show View"
-
-#~ msgid "Rate this Map"
-#~ msgstr "Rate this View"
-
 #~ msgid "Share This Map"
 #~ msgstr "Share This View"
-
-#~ msgid "This map uses the following layers:"
-#~ msgstr "This view uses the following layers:"
-
-#~ msgid "Documents related to this map"
-#~ msgstr "Documents related to this view"
-
-#~ msgid "List of documents related to this map:"
-#~ msgstr "List of documents related to this view:"
-
-#~ msgid "Specify which users can view or modify this map"
-#~ msgstr "Specify which users can view or modify this view"
-
-#~ msgid "Change Permissions of this Map"
-#~ msgstr "Change Permissions of this View"
-
-#~ msgid "Copy this map"
-#~ msgstr "Copy this view"
-
-#~ msgid "Duplicate this map and modify it for your own purposes"
-#~ msgstr "Duplicate this view and modify it for your own purposes"
-
-#~ msgid "Create a New Map"
-#~ msgstr "Create a New View"
-
-#~ msgid "Map WMS"
-#~ msgstr "View WMS"
-
-#~ msgid "WMS layer group for local map layers"
-#~ msgstr "WMS layer group for local view layers"
-
-#~ msgid "Publish local map layers as WMS layer group"
-#~ msgstr "Publish local view layers as WMS layer group"
-
-#~ msgid "Publish Map WMS"
-#~ msgstr "Publish View WMS"
 
 #~ msgid "Map Owner"
 #~ msgstr "View Owner"
@@ -2175,9 +2598,6 @@ msgstr ""
 #~ msgid "Start downloading this map"
 #~ msgstr "Start downloading this view"
 
-#~ msgid "Create a new map"
-#~ msgstr "Create a new view"
-
 #~ msgid ""
 #~ "\n"
 #~ "      Please contact your GeoNode administrator (he may have received an "
@@ -2203,9 +2623,6 @@ msgstr ""
 
 #~ msgid "Useful information for developers interested in GeoNode."
 #~ msgstr "Useful information for developers interested in GeoNode."
-
-#~ msgid "GeoNode's Web Services"
-#~ msgstr "StarterKit's Web Services"
 
 #~ msgid "GeoNode's Web Services are available from the following URLs:"
 #~ msgstr "StarterKit's Web Services are available from the following URLs:"
