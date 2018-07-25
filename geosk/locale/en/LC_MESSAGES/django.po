@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-24 09:58-0500\n"
+"POT-Creation-Date: 2018-07-25 08:52-0500\n"
 "PO-Revision-Date: 2014-06-18 02:48-0600\n"
 "Last-Translator: <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -298,6 +298,7 @@ msgid "Category"
 msgstr ""
 
 #: geosk/mdtools/templates/base/resourcebase_info_panel.html:51
+#: geosk/templates/search/_region_filter.html:5
 msgid "Regions"
 msgstr ""
 
@@ -1319,7 +1320,8 @@ msgstr ""
 
 #: geosk/templates/account/logout.html:6 geosk/templates/account/logout.html:10
 #: geosk/templates/account/logout.html:19 geosk/templates/admin/base.html:22
-#: geosk/templates/base_old.html:64 geosk/templates/site_base_old.html:46
+#: geosk/templates/base_old.html:64 geosk/templates/site_base.html:138
+#: geosk/templates/site_base_old.html:46
 msgid "Log out"
 msgstr ""
 
@@ -2039,6 +2041,10 @@ msgstr ""
 msgid "of"
 msgstr ""
 
+#: geosk/templates/search/_region_filter.html:10
+msgid "Search by region"
+msgstr ""
+
 #: geosk/templates/search/_search_content.html:11
 #, fuzzy
 #| msgid "Edit Map Permissions"
@@ -2177,6 +2183,18 @@ msgstr ""
 #: geosk/templates/search_old/advanced_search.html:125
 msgid "Clear Options "
 msgstr ""
+
+#: geosk/templates/site_base.html:32
+#, fuzzy
+#| msgid "Explore Maps"
+msgid "Upload Layer"
+msgstr "Explore Views"
+
+#: geosk/templates/site_base.html:36
+#, fuzzy
+#| msgid "Explore Documents"
+msgid "Upload Document"
+msgstr "Esplora documenti"
 
 #: geosk/templates/site_base.html:75 geosk/templates/site_base.html.py:85
 #: geosk/templates/site_base_old.html:109 geosk/templates/site_index.html:60

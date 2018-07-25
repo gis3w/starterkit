@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: STARTER KIT\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-24 09:58-0500\n"
+"POT-Creation-Date: 2018-07-25 08:52-0500\n"
 "PO-Revision-Date: 2014-06-19 18:14+0100\n"
 "Last-Translator: <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -301,6 +301,7 @@ msgid "Category"
 msgstr "Categoria"
 
 #: geosk/mdtools/templates/base/resourcebase_info_panel.html:51
+#: geosk/templates/search/_region_filter.html:5
 msgid "Regions"
 msgstr "Regione"
 
@@ -1458,7 +1459,8 @@ msgstr "Hai dimenticato la tua password?"
 
 #: geosk/templates/account/logout.html:6 geosk/templates/account/logout.html:10
 #: geosk/templates/account/logout.html:19 geosk/templates/admin/base.html:22
-#: geosk/templates/base_old.html:64 geosk/templates/site_base_old.html:46
+#: geosk/templates/base_old.html:64 geosk/templates/site_base.html:138
+#: geosk/templates/site_base_old.html:46
 msgid "Log out"
 msgstr "Esci"
 
@@ -1487,7 +1489,7 @@ msgstr "Documentazione di Rosetta"
 
 #: geosk/templates/base.html:62 geosk/templates/site_base.html:25
 msgid "Data"
-msgstr ""
+msgstr "Dati"
 
 #: geosk/templates/base.html:67 geosk/templates/base.html.py:208
 #: geosk/templates/people/profile_detail.html:160
@@ -1507,7 +1509,7 @@ msgstr "Crea layer"
 #: geosk/templates/base.html:74 geosk/templates/base.html.py:214
 #: geosk/templates/site_base.html:37
 msgid "Add Remote Service"
-msgstr ""
+msgstr "Aggiungi servizio remoto"
 
 #: geosk/templates/base.html:82 geosk/templates/base.html.py:221
 #: geosk/templates/maps/map_list.html:16 geosk/templates/site_base.html:45
@@ -1517,7 +1519,6 @@ msgstr "Esplora mappe"
 
 #: geosk/templates/base.html:83 geosk/templates/base.html.py:223
 #: geosk/templates/site_base.html:46
-#| msgid "Create a Map"
 msgid "Create Map"
 msgstr "Crea una mappa"
 
@@ -1533,7 +1534,6 @@ msgid "Groups"
 msgstr "gruppo"
 
 #: geosk/templates/base.html:94 geosk/templates/site_base.html:58
-#| msgid "Categories"
 msgid "Group Categories"
 msgstr "Categorie"
 
@@ -1546,7 +1546,6 @@ msgstr "Notizie"
 
 #: geosk/templates/base.html:100 geosk/templates/base.html.py:236
 #: geosk/templates/site_base.html:64
-#| msgid "Sensors"
 msgid "Add User"
 msgstr "Aggiungi utente"
 
@@ -1631,10 +1630,8 @@ msgid "Type your search here ..."
 msgstr ""
 
 #: geosk/templates/base/_resourcebase_snippet.html:30
-#, fuzzy
-#| msgid "Sensor details"
 msgid "Show detail"
-msgstr "Dettagli del sensore"
+msgstr "Dettagli"
 
 #: geosk/templates/base_old.html:54
 #: geosk/templates/people/profile_detail.html:165
@@ -2192,6 +2189,10 @@ msgstr "pagina"
 msgid "of"
 msgstr "di"
 
+#: geosk/templates/search/_region_filter.html:10
+msgid "Search by region"
+msgstr "Cerca per regione"
+
 #: geosk/templates/search/_search_content.html:11
 #, fuzzy
 #| msgid "permissions"
@@ -2200,11 +2201,11 @@ msgstr "permessi"
 
 #: geosk/templates/search/_search_content.html:23
 msgid "Filters"
-msgstr ""
+msgstr "Filtri"
 
 #: geosk/templates/search/_search_content.html:24
 msgid "Clear"
-msgstr "Svuota"
+msgstr "Pulisci"
 
 #: geosk/templates/search/_search_user_content.html:11
 #, fuzzy
@@ -2249,10 +2250,8 @@ msgid "Text"
 msgstr ""
 
 #: geosk/templates/search/_text_filter.html:10
-#, fuzzy
-#| msgid "Search by Extent: "
 msgid "Search by text"
-msgstr "Cerca per estensione:"
+msgstr "Cerca per testo"
 
 #: geosk/templates/search_old/_general_filters.html:7
 msgid "Date begins after:"
@@ -2334,6 +2333,14 @@ msgstr "Fino a questa data"
 #: geosk/templates/search_old/advanced_search.html:125
 msgid "Clear Options "
 msgstr "Cancella opzioni"
+
+#: geosk/templates/site_base.html:32
+msgid "Upload Layer"
+msgstr "Carica layer"
+
+#: geosk/templates/site_base.html:36
+msgid "Upload Document"
+msgstr "Carica documento"
 
 #: geosk/templates/site_base.html:75 geosk/templates/site_base.html.py:85
 #: geosk/templates/site_base_old.html:109 geosk/templates/site_index.html:60
@@ -2711,7 +2718,6 @@ msgstr ""
 "DANNI E ANCHE     SE GLI EVENTUALI RIMEDI NON SONO IN GRADO DI RISPONDERE AL "
 "LORO     PROPOSITO ESSENZIALE; (B) RESPONSABILITÀ INDIRETTA PER OGNI     "
 "RECLAMO RELATIVO AI SERVIZI.   </p> "
-
 
 #~ msgid " is based on"
 #~ msgstr " è basato su"
@@ -3830,9 +3836,6 @@ msgstr ""
 
 #~ msgid "Choose a file"
 #~ msgstr "Scegli un file"
-
-#~ msgid "Upload Document"
-#~ msgstr "Carica documento"
 
 #~ msgid "Type a title"
 #~ msgstr "Assegna un titolo"
@@ -5128,9 +5131,6 @@ msgstr ""
 
 #~ msgid "Send Reply"
 #~ msgstr "Invia risposta"
-
-#~ msgid "Upload Layer"
-#~ msgstr "Carica layer"
 
 #~ msgid "Select the charset or leave default"
 #~ msgstr "Seleziona un set di caratteri o lascia il valore di default"
