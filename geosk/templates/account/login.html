@@ -8,6 +8,9 @@
 
 {% block custom-wrap-class %}custom-login{% endblock %}
 
+{% block tabs %}{% endblock %}
+{% block extra_tab %}{% endblock %}
+{% block sign_in_tabs %}{% endblock %}
 
 {% block body_outer %}
 
@@ -31,14 +34,14 @@
             <input id="{{ form.password.id_for_label }}" class="form-control custom-control" name="password" placeholder="Password" type="text" />
         </div>
           {{ form.password.errors }}
-      <label class="checkbox custom-checkbox" for="{{ form.remember.id_for_label }}">{{ form.remember.label }}
+      <!--<label class="checkbox custom-checkbox" for="{{ form.remember.id_for_label }}">{{ form.remember.label }}
             <input id="{{ form.remember.id_for_label }}"  name="remember" type="checkbox" />
-      </label>
+      </label>-->
       </div>
 
       <div>
       {% comment %}{{ form|as_bootstrap }}{% endcomment %}
-      <a href="{% url 'gdpr' %}">GDPR</a>
+      <a href="{% url 'gdpr' %}">{% trans 'Integral information link' %}</a>
       {% if redirect_field_value %}
       <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
       {% endif %}

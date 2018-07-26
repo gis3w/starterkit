@@ -102,6 +102,7 @@
 {% endif %}
 {% endblock %}
 {% endblock %}
+          {% block sign_in_tabs %}
           </ul>
 	      <ul class="nav navbar-nav navbar-right custom-nav">
             <li>
@@ -156,6 +157,7 @@
 		      <li><a href="#" data-toggle="modal" data-target="#SigninModal" role="button" >{% trans "Sign in" %} </a></li>
               {% endif %}
             </ul>
+          {% endblock %}
           </div> <!--/.nav-collapse -->
         </div>
       <div class="custom-subnavbar">

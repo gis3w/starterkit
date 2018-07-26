@@ -637,3 +637,5 @@ PROXY_ALLOWED_HOSTS = ("*",)
 
 # Set default analytical
 PIWIK_DOMAIN_PATH = 'monitor.get-it.it/piwik'
+
+MIDDLEWARE_CLASSES += ('geosk.middleware.LoginRequiredMiddleware',)
