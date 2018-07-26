@@ -12,3 +12,7 @@
  nav a.avatar {
      text-transform: lowercase;
  }
+
+ .custom-text h4 a {
+     color: #fff;
+ }

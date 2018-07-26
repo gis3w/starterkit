@@ -6,12 +6,12 @@
       <div class="col-xs-12">
         {% block bulk_perms_button %}
         <div class="btn-group btn-group-justified custom-tools" role="group" aria-label="tools">
-          {% if request.user.is_authenticated %}
+          {% if request.user.is_authenticated and facet_type != 'maps'  or request.user.is_superuser %}
           <div class="btn-group" role="group">
             <button type="button" class="btn btn-default" ng-disabled="!cart.getCart().items.length" data-toggle="modal" data-target="#_bulk_permissions">{% trans "Set permissions" %}</button>
           </div>
           {% endif %}
-          {% if facet_type == 'layers' %}
+          {% if facet_type == 'layers' and request.user.is_superuser %}
           <div class="btn-group" role="group">
             <button type="button" class="btn btn-default" ng-disabled="!cart.getCart().items.length" ng-click="newMap()">{% trans "Create a Map" %}</button>
           </div>

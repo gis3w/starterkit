@@ -9,12 +9,14 @@
 
 {% block body %}
 <div class="page-header">
+    {% if user.is_superuser %}
     <a href="{% url "layer_upload" %}" target="_self">
         <div class="custom-layer-button pull-right">
             {% trans "Upload Layers" %}
             <div class="btn btn-primary">+</div>
         </div>
     </a>
+    {% endif %}
   <h2 class="page-title">{% trans "Explore Layers" %}</h2>
 </div>
   {% with include_type_filter='true' %}
@@ -24,12 +26,14 @@
   {% endwith %}
   {% endwith %}
   {% endwith %}
+  {% if user.is_superuser %}
   {% include "_bulk_permissions_form.html" %}
+  {% endif %}
 {% endblock %}
 
 {% block extra_script %}
 {{ block.super }}
-  {% if GEONODE_SECURITY_ENABLED %}
+  {% if GEONODE_SECURITY_ENABLED and user.is_superuser %}
     {% include "_permissions_form_js.html" %}
   {% endif %}
   <script type="text/javascript">

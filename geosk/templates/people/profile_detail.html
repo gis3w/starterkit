@@ -171,7 +171,9 @@
       {% else %}
         {% if user.is_superuser %}
         <ul class="list-group custom-profile-menu">
+        {% if profile.is_staff and user.is_staff or not profile.is_staff %}
           <li class="list-group-item"><a href="{% url "profile_edit" profile.username %}"><i class="fa fa-edit"></i> {% trans "Edit profile" %}</a></li>
+        {% endif %}
         </ul>
         {% endif %}
         <ul class="list-group custom-profile-menu">

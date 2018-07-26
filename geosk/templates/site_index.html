@@ -46,10 +46,10 @@ This is where you can override the hero area block. You can simply modify the co
                     <h4><a href="{% url "layer_browse" %}">{{ facets.layer|default:_("No") }} {% blocktrans count counter=facets.layer %}Layer{% plural %}Layers{% endblocktrans %}</a></h4>
                     <p>{% trans "Click to search for geospatial data published by other users, organizations and public sources. Download data in standard formats." %}</p>
                 </div>
-                 {% if user.is_authenticated %}
-                    <a href="{% url "layer_upload" %}" role="button"><div class="custom-button">{% trans "Add layers" %}</div></a>
+                 {% if user.is_authenticated and user.is_superuser %}
+                    <a class="text-uppercase" href="{% url "layer_upload" %}" role="button"><div class="custom-button">{% trans "Add layers" %}</div></a>
                 {% else %}
-                    <a href="{% url "layer_browse" %}" role="button"><div class="custom-button">{% trans "Explore layers" %} &raquo; </div></a>
+                    <a class="text-uppercase" href="{% url "layer_browse" %}" role="button"><div class="custom-button">{% trans "Explore layers" %} </div></a>
                 {% endif %}
             </div>
           </div>
@@ -75,10 +75,10 @@ This is where you can override the hero area block. You can simply modify the co
                     <h4><a href="{% url "maps_browse" %}">{{ facets.map|default:_("No") }} {% blocktrans count counter=facets.map %}Map{% plural %}Maps{% endblocktrans %}</a></h4>
                     <p>{% trans "Data is available for browsing, aggregating and styling to generate maps which can be saved, downloaded, shared publicly or restricted to specify users only." %}</p>
                 </div>
-                 {% if user.is_authenticated %}
-                    <a href="{% url "new_map" %}" role="button"><div class="custom-button">{% trans "Create maps" %}</div></a>
+                 {% if user.is_authenticated and user.is_superuser %}
+                    <a class="text-uppercase" href="{% url "new_map" %}" role="button"><div class="custom-button">{% trans "Create maps" %}</div></a>
                 {% else %}
-                    <a href="{% url "maps_browse" %}" role="button"><div class="custom-button">{% trans "Explore maps" %}</div></a>
+                    <a class="text-uppercase" href="{% url "maps_browse" %}" role="button"><div class="custom-button">{% trans "Explore maps" %}</div></a>
                 {% endif %}
             </div>
           </div>
@@ -104,7 +104,7 @@ This is where you can override the hero area block. You can simply modify the co
                     <h4><a href="{% url "profile_browse" %}">{{ facets.user|default:_("No") }} {% blocktrans count counter=facets.user %}User{% plural %}Users{% endblocktrans %}</a></h4>
                     <p>{% trans "IHP-WINS allows registered users to easily upload geospatial data and various documents in several formats." %}</p>
                 </div>
-                <a href="{% url "profile_browse" %}" role="button"><div class="custom-button">{% trans "See users" %}</div></a>
+                <a class="text-uppercase" href="{% url "profile_browse" %}" role="button"><div class="custom-button">{% trans "See users" %}</div></a>
             </div>
           </div>
           {% endif %}

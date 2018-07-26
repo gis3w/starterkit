@@ -404,9 +404,11 @@
                       {% endfor %}
                     </ul>
                 </li>
+                {% if user.is_superuser %}
                 <li class="list-group-item">
                     <a href="{% url "new_map" %}?layer={{resource.service_typename}}" class="btn btn-primary btn-block custom-full-btn"><i class="fa custom-icon custom-icon-hover custom-icon-map pull-left"></i> {% trans "Create a map using this layer" %}</a>
                 </li>
+                {% endif %}
                 {% if maps %}
                     <li class="list-group-item">
                         <h4>{% trans "Add the layer to an existing map" %}</h4>

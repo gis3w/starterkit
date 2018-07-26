@@ -24,17 +24,25 @@
 <li id="nav_layers">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "Data" %}<i class="fa fa-angle-down fa-lg"></i></a>
   <ul class="dropdown-menu custom-dropdown">
-    <li><a href="{% url "layer_browse" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Layers" %}</a></li>
+    <li><a href="{% url "layer_browse" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Explore layers" %}</a></li>
+    {% if user.is_superuser and user.is_staff %}
     <li><a href="{% url "document_browse" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Documents" %}</a></li>
+    {% endif %}
     {% if user.is_authenticated %}
+    {% if user.is_superuser %}
+    {% if user.is_staff %}
     <li><a href="{% url "services" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Remote Services" %}</a></li>
     <li role="separator" class="divider"></li>
+    {% endif %}
     <li><a href="{% url "layer_upload" %}">{% trans 'Upload Layer' %}</a></li>
+    {% endif %}
     {% if 'geonode.contrib.createlayer' in INSTALLED_APPS %}
       <li><a href="{% url "layer_create" %}">{% trans "Create Layer" %}</a></li>
     {% endif %}
+    {% if user.is_superuser and user.is_staff %}
     <li><a href="{% url "document_upload" %}">{% trans 'Upload Document' %}</a></li>
     <li><a href="{% url "register_service" %}">{% trans "Add Remote Service" %}</a></li>
+    {% endif %}
     {% endif %}
   </ul>
 </li>
@@ -43,10 +51,12 @@
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "Maps" %}<i class="fa fa-angle-down fa-lg"></i></a>
   <ul class="dropdown-menu custom-dropdown">
     <li><a href="{% url "maps_browse" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Explore Maps" %}</a></li>
+    {% if user.is_superuser %}
     <li> <a href="{% url "new_map" %}">{% trans "Create Map" %}</a></li>
+    {% endif %}
   </ul>
   {% else %}
-  <a href="{% url "maps_browse" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Maps" %}</a>
+  <a class="text-uppercase" href="{% url "maps_browse" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Maps" %}</a>
   {% endif %}
 </li>
 <li>
@@ -54,6 +64,7 @@
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "Users" %}<i class="fa fa-angle-down fa-lg"></i></a>
   <ul class="dropdown-menu custom-dropdown">
     <li><a href="{% url "profile_browse" %}">{% trans "People" %}</a></li>
+  {% if user.is_staff %}
     <li><a href="{% url "group_list" %}">{% trans "Groups" %}</a></li>
     <li><a href="{% url "group_category_list" %}">{% trans "Group Categories" %}</a></li>
     {% if perms.announcements.can_manage %}
@@ -65,6 +76,7 @@
     <li><a href="{% url "invitations:send-invite" %}">{% trans "Invite User" %}</a></li>
     <li><a href="{% url "group_create" %}">{% trans "Create Group" %}</a></li>
     {% endif %}
+  {% endif %}
   </ul>
   {% endif %}
 </li>
@@ -121,6 +133,7 @@
               </a>
               <ul class="dropdown-menu custom-dropdown">
                 <li><a href="{{ user.get_absolute_url }}">{% trans "Profile" %}</a></li>
+                {% if user.is_superuser and user.is_staff %}
                 <li><a href="{% url "recent-activity" %}">{% trans "Recent Activity" %}</a></li>
                 <li><a href="{% url "messages_inbox" %}">{% trans "Inbox" %}</a></li>
                 <li role="separator" class="divider"></li>
@@ -128,13 +141,14 @@
                 {% if 'geonode.geoserver' in INSTALLED_APPS %}
                 <li><a href="{{ GEOSERVER_BASE_URL }}index.html">GeoServer</a></li>
                 {% endif %}
+                {% endif %}
                 {% if user.is_superuser and USE_MONITORING %}
                 <li role="separator" class="divider"></li>
                 <li><a href="{% url "monitoring:index" %}">{% trans "Monitoring" %}</a></li>
+                <li role="separator" class="divider"></li>
                 {% endif %}
-                <li role="separator" class="divider"></li>
                 <li><a href="{% url "help" %}">{% trans "Help" %}</a></li>
-                <li role="separator" class="divider"></li>
+                <!--<li role="separator" class="divider"></li>-->
                 <li><a href="/account/logout/">{% trans 'Log out' %}</a></li>
                 </ul>
               </li>
