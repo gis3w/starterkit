@@ -47,9 +47,9 @@ This is where you can override the hero area block. You can simply modify the co
                     <p>{% trans "Click to search for geospatial data published by other users, organizations and public sources. Download data in standard formats." %}</p>
                 </div>
                  {% if user.is_authenticated and user.is_superuser %}
-                    <a class="text-uppercase" href="{% url "layer_upload" %}" role="button"><div class="custom-button">{% trans "Add layers" %}</div></a>
+                    <a class="text-uppercase" href="{% url "layer_upload" %}" role="button"><div class="btn btn-default btn-homepage">{% trans "Add layers" %}</div></a>
                 {% else %}
-                    <a class="text-uppercase" href="{% url "layer_browse" %}" role="button"><div class="custom-button">{% trans "Explore layers" %} </div></a>
+                    <a class="text-uppercase" href="{% url "layer_browse" %}" role="button"><div class="btn btn-default btn-homepage">{% trans "Explore layers" %} </div></a>
                 {% endif %}
             </div>
           </div>
@@ -60,9 +60,9 @@ This is where you can override the hero area block. You can simply modify the co
             <h2><a href="{% url "osk_browse" %}">{% trans 'Sensors'%}</a></h2>
             <p>{% trans "Registerd SOS (Sensor Observation Service). It aggregates observations from live in-situ sensors as well as historical data sets (time series data)" %}</p>
             {% if user.is_authenticated %}
-            <p class="text-center"><a class="btn btn-default" href="{% url "osk_browse" %}#ediclient_container" role="button">{% trans "Add sensors" %} &raquo;</a></p>
+            <p class="text-center"><a class="btn btn-default" href="{% url "osk_browse" %}#ediclient_container" class="btn btn-default btn-homepage" role="button">{% trans "Add sensors" %}</a></p>
             {% else %}
-            <p class="text-center"><a class="btn btn-default" href="{% url "osk_browse" %}" role="button">{% trans "Explore sensors" %} &raquo;</a></p>
+            <p class="text-center"><a class="btn btn-default" href="{% url "osk_browse" %}" role="button" class="btn btn-default btn-homepage">{% trans "Explore sensors" %}</a></p>
             {% endif %}
           </div>
           {% endif %}
@@ -76,9 +76,9 @@ This is where you can override the hero area block. You can simply modify the co
                     <p>{% trans "Data is available for browsing, aggregating and styling to generate maps which can be saved, downloaded, shared publicly or restricted to specify users only." %}</p>
                 </div>
                  {% if user.is_authenticated and user.is_superuser %}
-                    <a class="text-uppercase" href="{% url "new_map" %}" role="button"><div class="custom-button">{% trans "Create maps" %}</div></a>
+                    <a class="text-uppercase" href="{% url "new_map" %}" role="button"><div class="btn btn-default btn-homepage">{% trans "Create maps" %}</div></a>
                 {% else %}
-                    <a class="text-uppercase" href="{% url "maps_browse" %}" role="button"><div class="custom-button">{% trans "Explore maps" %}</div></a>
+                    <a class="text-uppercase" href="{% url "maps_browse" %}" role="button"><div class="btn btn-default btn-homepage">{% trans "Explore maps" %}</div></a>
                 {% endif %}
             </div>
           </div>
@@ -89,9 +89,9 @@ This is where you can override the hero area block. You can simply modify the co
             <h2><a href="{% url "document_browse" %}">{{ facets.document|default:_("No") }} {% blocktrans count counter=facets.document %}Document{% plural %}Documents{% endblocktrans %}</a></h2>
             <p>{% trans "As for the layers and maps GeoNode allows to publish tabular and text data, manage theirs metadata and associated documents." %}</p>
             {% if user.is_authenticated %}
-            <p class="text-center"><a class="btn btn-default" href="{% url "document_browse" %}" role="button">{% trans "Add documents" %} &raquo;</a></p>
+                <p class="text-center"><a class="btn btn-default" href="{% url "document_browse" %}" role="button"><div class="btn btn-default btn-homepage">{% trans "Add documents" %}</div></a></p>
             {% else %}
-            <p class="text-center"><a class="btn btn-default" href="{% url "document_browse" %}" role="button">{% trans "Explore documents" %} &raquo;</a></p>
+                <p class="text-center"><a class="btn btn-default" href="{% url "document_browse" %}" role="button"><div class="btn btn-default btn-homepage">{% trans "Explore documents" %}</div></a></p>
             {% endif %}
           </div>
           {% endif %}
@@ -104,7 +104,7 @@ This is where you can override the hero area block. You can simply modify the co
                     <h4><a href="{% url "profile_browse" %}">{{ facets.user|default:_("No") }} {% blocktrans count counter=facets.user %}User{% plural %}Users{% endblocktrans %}</a></h4>
                     <p>{% trans "IHP-WINS allows registered users to easily upload geospatial data and various documents in several formats." %}</p>
                 </div>
-                <a class="text-uppercase" href="{% url "profile_browse" %}" role="button"><div class="custom-button">{% trans "See users" %}</div></a>
+                <a class="text-uppercase" href="{% url "profile_browse" %}" role="button"><div class="btn btn-default btn-homepage">{% trans "See users" %}</div></a>
             </div>
           </div>
           {% endif %}

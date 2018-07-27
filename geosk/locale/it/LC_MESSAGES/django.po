@@ -1639,7 +1639,7 @@ msgstr ""
 
 #: geosk/templates/base/_resourcebase_snippet.html:30
 msgid "Show detail"
-msgstr "Dettagli"
+msgstr "Guarda scheda"
 
 #: geosk/templates/base_old.html:54
 #: geosk/templates/people/profile_detail.html:165

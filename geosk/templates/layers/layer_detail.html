@@ -102,15 +102,15 @@
                   {% if resource.storeType != "remoteStore" %}
                     <li class="list-group-item">
                     {% if links or links_download %}
-                       <button class="btn btn-primary btn-md btn-block custom-half-btn" data-toggle="modal" data-target="#download-layer">{% trans "Download Layer" %}</button>
+                       <button class="btn btn-default btn-md btn-half btn-block" data-toggle="modal" data-target="#download-layer">{% trans "Download Layer" %}</button>
                     {% else %}
                       {% if request.user.is_authenticated %}
-                      <button class="btn btn-primary btn-md btn-block custom-half-btn" id="request-download">{% trans "Request Download" %}</button>
+                      <button class="btn btn-default btn-md btn-half btn-block" id="request-download">{% trans "Request Download" %}</button>
                       {% endif %}
                     {% endif %}
 
                     {% if "change_resourcebase_metadata" in perms_list or "change_resourcebase" in perms_list or "delete_resourcebase" in perms_list or "change_layer_style" in layer_perms %}
-                    <button class="btn btn-primary btn-md btn-block custom-half-btn no-margin" data-toggle="modal" data-target="#edit-layer">{% trans "Edit Layer" %}</button>
+                    <button class="btn btn-default btn-md btn-block btn-half no-margin" data-toggle="modal" data-target="#edit-layer">{% trans "Edit Layer" %}</button>
                      {% endif %}
                     </li>
                   {% endif %}
@@ -341,7 +341,7 @@
 
                 <li class="list-group-item">
                   <a href="{% url "layer_metadata_detail" resource.alternate %}">
-                    <button class="btn btn-primary btn-md btn-block custom-full-btn">{% trans "Metadata Detail" %}</button>
+                    <button class="btn btn-default btn-md btn-block">{% trans "Metadata Detail" %}</button>
                   </a>
                 </li>
 
@@ -406,7 +406,7 @@
                 </li>
                 {% if user.is_superuser %}
                 <li class="list-group-item">
-                    <a href="{% url "new_map" %}?layer={{resource.service_typename}}" class="btn btn-primary btn-block custom-full-btn"><i class="fa custom-icon custom-icon-hover custom-icon-map pull-left"></i> {% trans "Create a map using this layer" %}</a>
+                    <a href="{% url "new_map" %}?layer={{resource.service_typename}}" class="btn btn-default btn-block "><i class="fa custom-icon custom-icon-hover custom-icon-map pull-left"></i> {% trans "Create a map using this layer" %}</a>
                 </li>
                 {% endif %}
                 {% if maps %}
@@ -421,7 +421,7 @@
                             </select>
                             <p>{% trans "Click the button below to add the layer to the selected map." %}</p>
                             <input type="hidden" name="layer_name" value="{{ resource.alternate }}">
-                            <input type="submit" class="btn btn-primary btn-block" value="{% trans "Add to Map" %}">
+                            <input type="submit" class="btn btn-default btn-block" value="{% trans "Add to Map" %}">
                         </form>
                     </li>
                 {% endif %}
@@ -481,7 +481,7 @@
                 <li class="list-group-item">
                   <h4>{% trans "Permissions" %}</h4>
                   <p>{% trans "Click the button below to change the permissions of this layer." %}</p>
-                  <p><a href="#modal_perms" data-toggle="modal" class="btn btn-primary btn-block custom-full-btn" data-target="#_permissions"><i class="fa custom-icon custom-icon-hover custom-icon-lock pull-left"></i> {% trans "Change Layer Permissions" %}</a></p>
+                  <p><a href="#modal_perms" data-toggle="modal" class="btn btn-default btn-block " data-target="#_permissions"><i class="fa custom-icon custom-icon-hover custom-icon-lock pull-left"></i> {% trans "Change Layer Permissions" %}</a></p>
                 </li>
                 {% endif %}
                 {% endif %}
@@ -845,7 +845,7 @@
               input = attribute_list + operator_list + single_value_input;
               input_id = attribute_list + single_value_input;
 
-              $("#added_rules").append( '<div class="input-group user-input-filters"><div class="input-group-btn" id="erase_query"><a href="#"  class="btn btn-primary btn-mg" data-toggle="modal" data-target="#myModal" title="" ><span class="glyphicon glyphicon-minus"></span></a></div><input type="text" class="form-control" id="' + input_id + '" placeholder="" data-toggle="tooltip" title="" value="' + input + '"readonly></br></div>');
+              $("#added_rules").append( '<div class="input-group user-input-filters"><div class="input-group-btn" id="erase_query"><a href="#"  class="btn btn-deafult btn-mg" data-toggle="modal" data-target="#myModal" title="" ><span class="glyphicon glyphicon-minus"></span></a></div><input type="text" class="form-control" id="' + input_id + '" placeholder="" data-toggle="tooltip" title="" value="' + input + '"readonly></br></div>');
               // push data to array
               if (input != ''){
                   query.push(input);

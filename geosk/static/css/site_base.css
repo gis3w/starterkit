@@ -16,3 +16,7 @@
  .custom-text h4 a {
      color: #fff;
  }
+
+ .no-margin-right {
+     margin-right: 0px !important;
+ }
