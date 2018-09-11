@@ -32,7 +32,7 @@
   {% avatar profile 210 %}
 </div>
 
-    <div class="col-xs-9 col-md-6 profile-details">
+    <div class="col-xs-9 col-md-{% if user.is_superuser %}6{% else %}9{% endif %} profile-details">
 
     {% if user.is_authenticated %}
     {% if user == profile %}
@@ -105,6 +105,7 @@
             <td>{{ profile.profile | default:_('Not provided.') }}</td>
           </tr>
           {% endif %}
+          <!--
           <tr>
             <td class="table-user-profile-attribute">{% trans 'Keywords' %}</td>
             <td>
@@ -117,9 +118,10 @@
                 {% endif %}
             </td>
           </tr>
+          -->
         </tbody>
       </table>
-      {% if USE_GEOSERVER and DISPLAY_WMS_LINKS %}
+      {% if USE_GEOSERVER and DISPLAY_WMS_LINKS and user.is_superuser and user.is_staff %}
       <p>
           {% if request.user.is_authenticated and 'access_token' in request.session %}
             <a href="{% url 'capabilities_user' profile.username %}?access_token={{ request.session.access_token }}">
@@ -129,7 +131,7 @@
           <i class="fa fa-map"></i> {% trans 'User layers WMS GetCapabilities document' %}</a></p>
       {% endif %}
     </div>
-
+    {% if user.is_superuser and user.is_staff %}
     <div class="col-xs-12 col-md-3">
       <ul class="list-group custom-profile-menu">
           <li class="list-group-item"><a href="{% url "message_create" profile.pk %}"><i class="fa fa-paper-plane-o"></i> {% trans "Message User" %}</a></li>
@@ -188,6 +190,7 @@
         {% include "relationships/_list_connections.html" %}
       {% endif_has_tag %}
     </div>
+    {% endif %}
 
     <div class="col-md-9">
       <h4>{% trans "Resources" %}</h4>

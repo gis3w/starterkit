@@ -639,3 +639,7 @@ PROXY_ALLOWED_HOSTS = ("*",)
 PIWIK_DOMAIN_PATH = 'monitor.get-it.it/piwik'
 
 MIDDLEWARE_CLASSES += ('geosk.middleware.LoginRequiredMiddleware',)
+
+LOGIN_EXEMPT_URLS = [
+    'gdpr/'
+]
