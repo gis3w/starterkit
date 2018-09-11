@@ -16,7 +16,7 @@
 	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 	        <i class="fa fa-navicon fa-lg"></i>
 	      </button>
-	      <a class="navbar-brand header-logo" href="{% url "home" %}">GeoNode</a>
+	      <a class="navbar-brand header-logo" {% if user.is_superuser and user.is_staff %}style="width:100px"{% endif %} href="{% url "home" %}">IBF</a>
 	    </div>
 	    <div id="navbar" class="navbar-collapse collapse">
 	      <ul class="nav navbar-nav toolbar  custom-nav">
@@ -70,12 +70,13 @@
     {% if perms.announcements.can_manage %}
     <li><a href="{% url "announcements_list" %}">{% trans "Announcements" %}</a></li>
     {% endif %}
-    {% if user.is_superuser %}
+
+
     <li role="separator" class="divider"></li>
     <li><a href="/admin/people/profile/add/">{% trans "Add User" %}</a></li>
+
     <li><a href="{% url "invitations:send-invite" %}">{% trans "Invite User" %}</a></li>
     <li><a href="{% url "group_create" %}">{% trans "Create Group" %}</a></li>
-    {% endif %}
   {% endif %}
   </ul>
   {% endif %}

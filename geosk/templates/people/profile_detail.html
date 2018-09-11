@@ -68,8 +68,10 @@
             {% endif %}
 
               <!--<h3>{{ profile.first_name|default:profile.name_long }}</h3>-->
-              <table class="table table-user-profile custom-user-table">
+
+              <table class="table table-user-profile custom-user-table {% if not user.is_superuser %} custom-user-table-float {% endif %}">
                 <tbody>
+                {% if user.is_superuser %}
                   {% if SHOW_PROFILE_EMAIL %}
                   <tr>
                     <td class="table-user-profile-attribute">{% trans 'Email' %}</td>
@@ -126,6 +128,65 @@
                   -->
                 </tbody>
               </table>
+              {% else %}
+                  {% if SHOW_PROFILE_EMAIL %}
+                  <tr>
+                    <td class="table-user-profile-attribute">{% trans 'Email' %}</td>
+                    {% if profile.email %}
+                        <td><a href="mailto:{{ profile.email }}">{{ profile.email }}</a></td>
+                    {% else %}
+                        <td>{% trans 'Not provided.' %}</td>
+                    {% endif %}
+                  </tr>
+                  {% endif %}
+                  <tr>
+                    <td class="table-user-profile-attribute">{% trans 'Position' %}</td>
+                    <td>{{ profile.position | default:_('Not provided.') }}</td>
+                  </tr>
+                  <tr>
+                    <td class="table-user-profile-attribute">{% trans 'Organization'  %}</td>
+                    <td>{{ profile.organization | default:_('Not provided.') }}</td>
+                  </tr>
+                  {% if user.is_authenticated %}
+                  <tr>
+                    <td class="table-user-profile-attribute">{% trans 'Location' %}</td>
+                    <td>{{ profile.location | default:_('Not provided.') }}</td>
+                  </tr>
+                  <tr>
+                    <td class="table-user-profile-attribute">{% trans 'Voice' %}</td>
+                    {% if profile.voice %}
+                        <td><a href="tel:{{ profile.voice }}">{{ profile.voice }}</a></td>
+                    {% else %}
+                        <td>Not provided.</td>
+                    {% endif %}
+                  </tr>
+                  <tr>
+                    <td class="table-user-profile-attribute">{% trans 'Fax' %}</td>
+                    <td>{{ profile.fax | default:_('Not provided.') }}</td>
+                  </tr>
+                  <tr>
+                    <td class="table-user-profile-attribute">{% trans 'Description' %}</td>
+                    <td>{{ profile.profile | default:_('Not provided.') }}</td>
+                  </tr>
+                  {% endif %}
+                  <!--
+                  <tr>
+                    <td class="table-user-profile-attribute">{% trans 'Keywords' %}</td>
+                    <td>
+                        {% if profile.keyword_list %}
+                            {% for keyword in profile.keyword_list %}
+                                <span class="label label-default">{{ keyword }}</span>
+                            {% endfor %}
+                        {% else %}
+                            {% trans 'Not provided' %}
+                        {% endif %}
+                    </td>
+                  </tr>
+                  -->
+
+              {% endif %}
+            </tbody>
+          </table>
               {% if USE_GEOSERVER and DISPLAY_WMS_LINKS and user.is_superuser and user.is_staff %}
               <p>
                   {% if request.user.is_authenticated and 'access_token' in request.session %}
@@ -136,7 +197,7 @@
                   <i class="fa fa-map"></i> {% trans 'User layers WMS GetCapabilities document' %}</a></p>
               {% endif %}
             </div>
-            {% if user.is_superuser and user.is_staff %}
+            {% if user.is_superuser %}
             <div class="col-xs-12 col-md-3">
               <ul class="list-group custom-profile-menu">
                   <li class="list-group-item"><a href="{% url "message_create" profile.pk %}"><i class="fa fa-paper-plane-o"></i> {% trans "Message User" %}</a></li>
@@ -154,6 +215,7 @@
                   <li class="list-group-item"><a href="{% url "new_map" %}"><i class="fa custom-icon custom-icon-map custom-icon-green"></i><!--<i class="fa fa-map-marker"></i>--> {% trans "Create a new map" %}</a></li>
                   <li class="list-group-item"><a href="{% url "user-activity" profile.username %}"><i class="fa custom-icon custom-icon-activities custom-icon-green"></i><!--<i class="fa fa-fire">--></i> {% trans "My Activities" %}</a></li>
                 </ul>
+                {% if user.is_superuser and user.is_staff %}
                 <ul class="list-group custom-profile-menu">
                   {% if USE_NOTIFICATIONS %}
                   <li class="list-group-item"><a href="{% url "notification_notice_settings" %}"><i class="fa fa-bell"></i> {% trans "Notifications" %}</a></li>
@@ -172,6 +234,7 @@
                   <li class="list-group-item"><a href="{% url "admin:index" %}"><i class="fa fa-cog"></i> {% trans "Admin" %}</a></li>
                   {% endif %}
                 </ul>
+                {% endif %}
                 {% if_has_tag if_relationship %}
                   {% include "relationships/_manage_connections.html" %}
                 {% endif_has_tag %}
