@@ -19,7 +19,7 @@
 	      <a class="navbar-brand header-logo" {% if user.is_superuser and user.is_staff %}style="width:100px"{% endif %} href="{% url "home" %}">IBF</a>
 	    </div>
 	    <div id="navbar" class="navbar-collapse collapse">
-	      <ul class="nav navbar-nav toolbar  custom-nav">
+	      <ul class="nav navbar-nav toolbar  custom-nav" {% if not user.is_authenticated %}style="display:none"{% endif %}>
 	        {% block tabs %}
 <li id="nav_layers">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "Data" %}<i class="fa fa-angle-down fa-lg"></i></a>
@@ -107,7 +107,7 @@
           </ul>
 	      <ul class="nav navbar-nav navbar-right custom-nav">
             <li>
-              <div class="search">
+              <div class="search" {% if not user.is_authenticated %}style="display:none"{% endif %}>
                 <form id="search" action="{% url "search" %}" >
                   <span class="fa fa-search"></span>
                   {% if HAYSTACK_SEARCH %}
