@@ -187,6 +187,7 @@
               {% endif %}
             </tbody>
           </table>
+              {% comment %}
               {% if USE_GEOSERVER and DISPLAY_WMS_LINKS and user.is_superuser and user.is_staff %}
               <p>
                   {% if request.user.is_authenticated and 'access_token' in request.session %}
@@ -196,6 +197,7 @@
                   {% endif %}
                   <i class="fa fa-map"></i> {% trans 'User layers WMS GetCapabilities document' %}</a></p>
               {% endif %}
+              {% endcomment %}
             </div>
             {% if user.is_superuser %}
             <div class="col-xs-12 col-md-3">
@@ -215,6 +217,7 @@
                   <li class="list-group-item"><a href="{% url "new_map" %}"><i class="fa custom-icon custom-icon-map custom-icon-green"></i><!--<i class="fa fa-map-marker"></i>--> {% trans "Create a new map" %}</a></li>
                   <li class="list-group-item"><a href="{% url "user-activity" profile.username %}"><i class="fa custom-icon custom-icon-activities custom-icon-green"></i><!--<i class="fa fa-fire">--></i> {% trans "My Activities" %}</a></li>
                 </ul>
+                {% comment %}
                 {% if user.is_superuser and user.is_staff %}
                 <ul class="list-group custom-profile-menu">
                   {% if USE_NOTIFICATIONS %}
@@ -235,6 +238,7 @@
                   {% endif %}
                 </ul>
                 {% endif %}
+                {% endcomment %}
                 {% if_has_tag if_relationship %}
                   {% include "relationships/_manage_connections.html" %}
                 {% endif_has_tag %}

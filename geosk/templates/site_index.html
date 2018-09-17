@@ -54,9 +54,11 @@ This is where you can override the hero area block. You can simply modify the co
             </div>
           </div>
           {% if user.is_staff %}
+          <!--
           <div class="col-md-{% if user.is_superuser or user.is_staff %}4{% else %}6{% endif %}">
             <p><a href="{% url "osk_browse" %}"><i class="fa fa-square-o fa-4x rotate-45"></i></a></p>
             <!--<h2><a href="{% url "osk_browse" %}">{{ facets.layer|default:_("No") }} {% blocktrans count counter=facets.layer %}Sensor{% plural %}Sensors{% endblocktrans %}</a></h2>-->
+          <!--
             <h2><a href="{% url "osk_browse" %}">{% trans 'Sensors'%}</a></h2>
             <p>{% trans "Registerd SOS (Sensor Observation Service). It aggregates observations from live in-situ sensors as well as historical data sets (time series data)" %}</p>
             {% if user.is_authenticated %}
@@ -65,6 +67,7 @@ This is where you can override the hero area block. You can simply modify the co
             <p class="text-center"><a class="btn btn-default" href="{% url "osk_browse" %}" role="button" class="btn btn-default btn-homepage">{% trans "Explore sensors" %}</a></p>
             {% endif %}
           </div>
+          -->
           {% endif %}
           <div class="col-md-{% if user.is_superuser or user.is_staff %}4{% else %}6{% endif %}">
             <div class="custom-col-content">
@@ -84,6 +87,7 @@ This is where you can override the hero area block. You can simply modify the co
           </div>
           {% if user.is_superuser %}
           {% if user.is_staff %}
+          <!--
           <div class="col-md-{% if user.is_superuser or user.is_staff %}4{% else %}6{% endif %}">
             <p><a href="{% url "document_browse" %}"><i class="fa fa-newspaper-o fa-4x"></i></a></p>
             <h2><a href="{% url "document_browse" %}">{{ facets.document|default:_("No") }} {% blocktrans count counter=facets.document %}Document{% plural %}Documents{% endblocktrans %}</a></h2>
@@ -94,6 +98,7 @@ This is where you can override the hero area block. You can simply modify the co
                 <p class="text-center"><a class="btn btn-default" href="{% url "document_browse" %}" role="button"><div class="btn btn-default btn-homepage">{% trans "Explore documents" %}</div></a></p>
             {% endif %}
           </div>
+          -->
           {% endif %}
           <div class="col-md-{% if user.is_superuser or user.is_staff %}4{% else %}6{% endif %}">
             <div class="custom-col-content">

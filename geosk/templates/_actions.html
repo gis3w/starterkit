@@ -3,6 +3,7 @@
 
   <li class="active"><a href="#info" data-toggle="tab"><i class="fa {% if resource.polymorphic_ctype.name == 'layer' %}custom-icon custom-icon-layer pull-left{% else %} fa-info-circle {% endif %}"></i>
       {% if resource.polymorphic_ctype.name == 'layer' %}{% trans "Layer" %}{% else %}{% trans "Info" %}{% endif %}</a></li>
+{% comment %}
   {% if resource.polymorphic_ctype.name == 'layer' and user.is_staff %}
   <li><a href="#attributes" data-toggle="tab"><i class="fa fa-bars"></i>{% trans "Attributes" %}</a></li>
   {% endif %}
@@ -15,13 +16,16 @@
   {% if DISPLAY_RATINGS and user.is_staff %}
   <li><a href="#rate" data-toggle="tab"><i class="fa fa-star"></i>{% trans "Ratings" %}</a></li>
   {% endif %}
+{% endcomment %}
   {% if DISPLAY_COMMENTS %}
   <li><a href="#comments" data-toggle="tab"><i class="fa custom-icon custom-icon-comment pull-left"></i> {% trans "Comments" %}</a></li>
   {% endif %}
+{% comment %}
   {% if GEOGIG_ENABLED and resource.link_set.geogig and user.is_staff %}
   <li><a href="#geogig" data-toggle="tab"><i class="fa fa-code-fork"></i> {% trans "GeoGig" %}</a></li>
   {% endif %}
   {% if EXIF_ENABLED and resource.polymorphic_ctype.name == 'document' and exif_data and user.is_staff %}
   <li><a href="#exif" data-toggle="tab"><i class="fa fa-photo"></i> {% trans "Exif" %}</a></li>
   {% endif %}
+{% endcomment %}
 </ul>
