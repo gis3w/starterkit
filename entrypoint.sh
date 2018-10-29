@@ -45,6 +45,11 @@ else
         cmd=$CELERY_CMD
         echo "Executing Celery server $cmd for Production"
 
+    elif [ ${IS_SUPERVISOR} = "true" ]
+
+        cmd=$SUPERVISOR_CMD
+        echo "Executing Supervisor daemon $cmd for Production"
+
     else
 
         cmd=$UWSGI_CMD

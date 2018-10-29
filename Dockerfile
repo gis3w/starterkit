@@ -22,12 +22,21 @@ MAINTAINER Starterkit development team
 #     && pip uninstall --yes kombu \
 #     && pip install git+https://github.com/celery/kombu.git#egg=kombu
 RUN apt-get update \
-    && apt-get install -y geoip-bin
+    && apt-get install -y geoip-bin \
+    && apt-get install -y supervisor \
+    && apt-get install -y cron
 
 # add bower and grunt command
 ONBUILD COPY . /usr/src/app/
 WORKDIR /usr/src/app
 RUN pip install -e .
+
+ENV DJANGO_SETTINGS_MODULE geosk.settings
+
+# supervisord config file
+RUN cp scripts/docker/misc/geonode-monitoring.conf /etc/supervisor/conf.d/ \
+    && service supervisor restart \
+    && update-rc.d supervisor enable
 
 EXPOSE 8000
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
