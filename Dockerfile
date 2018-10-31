@@ -34,9 +34,15 @@ RUN pip install -e .
 ENV DJANGO_SETTINGS_MODULE geosk.settings
 
 # supervisord config file
-RUN cp scripts/docker/misc/geonode-monitoring.conf /etc/supervisor/conf.d/ \
-    && service supervisor restart \
-    && update-rc.d supervisor enable
+#RUN cp scripts/docker/misc/geonode-monitoring.conf /etc/supervisor/conf.d/ \
+#    && update-rc.d supervisor enable
+
+RUN cp scripts/docker/misc/crontab_monitoring /etc/cron.d/monitoring
+RUN chmod 0644 /etc/cron.d/monitoring
+RUN crontab /etc/cron.d/monitoring
+RUN touch /var/log/cron.log
+
 
 EXPOSE 8000
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+

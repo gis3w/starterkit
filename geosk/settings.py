@@ -41,6 +41,7 @@ LOCAL_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 WSGI_APPLICATION = "{}.wsgi.application".format(PROJECT_NAME)
 
+
 if os.getenv('DOCKER_ENV'):
     ALLOWED_HOSTS = ast.literal_eval(os.getenv('ALLOWED_HOSTS'))
 else:
@@ -268,6 +269,8 @@ SOCIALACCOUNT_PROFILE_EXTRACTORS = {
     "facebook": "geonode.people.profileextractors.FacebookExtractor",
     "linkedin_oauth2": "geonode.people.profileextractors.LinkedInExtractor",
 }
+
+
 
 if os.getenv('DOCKER_ENV'):
 

@@ -46,7 +46,7 @@ else
         echo "Executing Celery server $cmd for Production"
 
     elif [ ${IS_SUPERVISOR} = "true" ]
-
+    then
         cmd=$SUPERVISOR_CMD
         echo "Executing Supervisor daemon $cmd for Production"
 
