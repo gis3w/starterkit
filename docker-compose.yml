@@ -91,6 +91,24 @@ services:
     env_file:
       - ./scripts/docker/env/production/celery.env
       - ./scripts/docker/env/production/sos.env
+  cron:
+    image: geobeyond/starterkit:2.7.x
+    restart: unless-stopped
+    container_name: cron4${COMPOSE_PROJECT_NAME}
+    stdin_open: true
+    # tty: true
+    labels:
+        org.geonode.component: cron
+        org.geonode.instance.name: geonode
+    depends_on:
+      - db
+      - django
+    command: /usr/bin/python -W ignore /usr/src/app/manage.py collect_metrics -n -t xml >> /var/log/cron.log 2>&1
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    env_file:
+      - ./scripts/docker/env/production/supervisor.env
+      - ./scripts/docker/env/production/sos.env
 
   consumers:
     image: geobeyond/starterkit:2.7.x

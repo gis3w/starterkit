@@ -48,7 +48,7 @@ else
     elif [ ${IS_SUPERVISOR} = "true" ]
     then
         cmd=$SUPERVISOR_CMD
-        echo "Executing Supervisor daemon $cmd for Production"
+        echo "Executing cron command $cmd for Production"
 
     else
 
