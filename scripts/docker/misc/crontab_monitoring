@@ -1,1 +1,0 @@
-* * * * * /usr/bin/python -W ignore /usr/src/app/manage.py collect_metrics -n -t xml >> /var/log/cron.log 2>&1

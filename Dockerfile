@@ -37,10 +37,10 @@ ENV DJANGO_SETTINGS_MODULE geosk.settings
 #RUN cp scripts/docker/misc/geonode-monitoring.conf /etc/supervisor/conf.d/ \
 #    && update-rc.d supervisor enable
 
-RUN cp scripts/docker/misc/crontab_monitoring /etc/cron.d/monitoring
-RUN chmod 0644 /etc/cron.d/monitoring
-RUN crontab /etc/cron.d/monitoring
-RUN touch /var/log/cron.log
+# RUN cp scripts/docker/misc/crontab_monitoring /etc/cron.d/monitoring
+# RUN chmod 0644 /etc/cron.d/monitoring
+# RUN crontab /etc/cron.d/monitoring
+# RUN touch /var/log/cron.log
 
 
 EXPOSE 8000
