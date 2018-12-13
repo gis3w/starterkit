@@ -67,6 +67,14 @@
       {% include "_actions.html" %}
     </div>
 
+    {% if GEOSERVER_BASE_URL %}
+      {% get_obj_perms request.user for resource.layer as "layer_perms" %}
+    {% endif %}
+
+    {% if OGC_SERVER.default.BACKEND == 'geonode.qgis_server' %}
+      {% get_obj_perms request.user for resource.layer as "layer_perms" %}
+    {% endif %}
+
     <div class="tab-content">
       <article id="info" class="tab-pane{% if tab == 'info' or not tab %} active{% endif %}">
         <div class="row">
@@ -357,13 +365,7 @@
 
 
 
-                {% if GEOSERVER_BASE_URL %}
-                  {% get_obj_perms request.user for resource.layer as "layer_perms" %}
-                {% endif %}
 
-                {% if OGC_SERVER.default.BACKEND == 'geonode.qgis_server' %}
-                  {% get_obj_perms request.user for resource.layer as "layer_perms" %}
-                {% endif %}
 
                 {% if user.is_staff %}
                 <!--
